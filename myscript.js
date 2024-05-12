@@ -3,7 +3,7 @@ const categories=
   { name: 'cat3'},
   { name: 'mawad'},
   { name: 'skaker'},
-  { name: 'cat'},
+  { name: 'cat1'},
 ];
 
 const products= 
@@ -14,8 +14,8 @@ const products=
   { name: 'product4',category:'cat3', price: 25000 },
   { name: 'product5',category:'cat3', price: 30000 },
   { name: 'product6',category:'cat3', price: 35000 },
-  { name: 'product7',category:'cat', price: 40000 },
-  { name: 'product8',category:'cat', price: 45000 }
+  { name: 'product7',category:'cat1', price: 40000 },
+  { name: 'product8',category:'cat1', price: 45000 }
 ];
 const mycart =[];
 
