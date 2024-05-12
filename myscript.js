@@ -82,7 +82,8 @@ function distribute(cat)
 			var img = document.createElement("img");
 			img.className="image";
 			img.src = "png/"+product.name+".png";
-			
+			img.width="70";
+			img.height="70";
 			var p=document.createElement("p");
 			p.className="overlay";
 			p.innerHTML=""+product.price;

@@ -10,7 +10,7 @@ body
 	flex-wrap: wrap;
 	width: auto;
 	height: auto;
-	position: absolute;
+	position: relative;
 	left: 210px;
 	top: 10px;
 }
@@ -21,24 +21,19 @@ body
 .overlay 
 {
 	position:absolute;
-	top: 103px;
+	top: 50px;
 	left: 0px;
 	right: 0px;
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5); /* Black see-through */
 	color: #f1f1f1; 
-	width: 138px;
-	height: 35px;
+	width: 70px;
+	height: 20px;
 	opacity: 0;
 	transition: .6s ease;
 	font-size: 20px;
 	text-align: center;
 	opacity: 1;
-}
-.image 
-{
-	width: auto;
-	height: auto;
 }
 .sidebar {
   margin: 0;
