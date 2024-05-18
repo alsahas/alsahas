@@ -14,6 +14,46 @@ const products=
   { name: 'product4',category:'cat3', price: 25000 },
   { name: 'product5',category:'cat3', price: 30000 },
   { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 350000 },
+  { name: 'product6',category:'cat3', price: 3500000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
+  { name: 'product6',category:'cat3', price: 35000 },
   { name: 'product7',category:'cat1', price: 40000 },
   { name: 'product8',category:'cat1', price: 45000 }
 ];
@@ -21,7 +61,7 @@ const mycart =[];
 
 function distributeCategories()
 {
-	var sidebar=document.getElementById("sidebar");
+	var topnav=document.getElementById("myCategories");
 	for (let i = 0; i < categories.length; i++)
 	{
 		const category = categories[i];
@@ -30,7 +70,7 @@ function distributeCategories()
 		a.onclick="distribute('"+category.name+"')";
 		a.href="javascript:distribute('"+category.name+"');";
 		a.innerHTML=category.name;
-		sidebar.append(a);
+		topnav.append(a);
 	}
 }
 function distributeMyCart()
@@ -67,9 +107,10 @@ function distribute(cat)
 {
 	var page=document.getElementById("page");
 	page.innerHTML="";
-	const sidebars=document.querySelectorAll("#sidebar a[href]");
-	for(let j=0;j<sidebars.length;j++)sidebars[j].className="";
+	const topnav=document.querySelectorAll("#topnav a[href]");
+	for(let j=0;j<topnav.length;j++)topnav[j].className="";
 	document.getElementById(cat).className="active";
+	
 	for (let i = 0; i < products.length; i++) 
 	{
 		const product = products[i];
@@ -86,7 +127,8 @@ function distribute(cat)
 			img.height="70";
 			var p=document.createElement("p");
 			p.className="overlay";
-			p.innerHTML=""+product.price;
+			p.style="font-size: 30px;";
+			p.innerHTML=numberComma(product.price);
 			
 			div.append(img);
 			div.append(p);
@@ -94,4 +136,26 @@ function distribute(cat)
 			page.append(div);
 		}
 	}
+}
+function numberComma(number)
+{
+	var result="";
+	var count=0;
+	if(number.length<=3)result=""+number;
+	else
+	{
+		result="";
+		var txt=""+number;
+		for(let i=txt.length-1;i>=0;i--)
+		{
+			if(count==3)
+			{
+				result=","+result;
+				count=0;
+			}
+			result=txt.charAt(i)+result;
+			count++;
+		}
+	}
+	return result;
 }

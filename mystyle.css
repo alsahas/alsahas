@@ -2,7 +2,10 @@
 {
 	body 
 	{
-		background-color: skyblue;
+		background-image: url('background.png');
+		background-repeat:  repeat;
+		background-attachment:fixed;
+		background-size: 100% 100%;
 		width: 90vw;
 		height: 90vh;
 	}
@@ -20,6 +23,30 @@
   height: auto;
   color: white;
   border-radius: 10px;
+}
+.page 
+{
+	display: flex;
+	gap: 20px;
+	flex-wrap: wrap;
+	width: auto;
+	height: auto;
+	position: relative;
+}
+.overlay 
+{
+	position:relative;
+	top: -20px;
+	left: 0px;
+	right: 0px;
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+	color: #f1f1f1; 
+	opacity: 0;
+	transition: .6s ease;
+	font-size: 15px;
+	text-align: center;
+	opacity: 1;
 }
 .topnav 
 {
