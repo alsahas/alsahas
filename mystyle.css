@@ -35,12 +35,13 @@
 	height: auto;
 	position: relative;
 }
-.overlay 
+#overlay 
 {
-	position:relative;
-	bottom: 40px;
+	position:absolute;
+	top: 70px;
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5); /* Black see-through */
+	font-size:0.8rem;
 	color: #f1f1f1; 
 	opacity: 0;
 	transition: .6s ease;

@@ -152,6 +152,7 @@ function distributeMyCart()
 			img.height="70";
 			var p=document.createElement("p");
 			p.className="overlay";
+			p.id="overlay";
 			p.style="font-size:0.8rem;";
 			p.innerHTML=numberComma(product.price)+" L.L.";
 			
@@ -187,7 +188,7 @@ function distribute(cat)
 		<div id="page" class="page">
 			<div class="container">
 				<a href="javascript:addProductToCart('productname');"><img class="image" src="png/productname.png" width=70 height=70>
-				<p class="overlay" style="font-size:0.8rem;">numberComma(product.price)+" L.L."</p>
+				<p class="overlay"id="overlay" style="font-size:0.8rem;">numberComma(product.price)+" L.L."</p>
 			</div>
 		</div>
 		*/
@@ -202,6 +203,7 @@ function distribute(cat)
 			img.height="70";
 			var p=document.createElement("p");
 			p.className="overlay";
+			p.id="overlay";
 			p.style="font-size:0.8rem;";
 			p.innerHTML=numberComma(product.price)+" L.L.";
 			
