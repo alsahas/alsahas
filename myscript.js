@@ -1,21 +1,21 @@
 const categories=
 [
-  { name: 'cat3'},
-  { name: '„Ê«œ'},
-  { name: 'skaker'},
-  { name: 'cat1'}
+  { name: "cat3"},
+  { name: "„Ê«œ"},
+  { name: "skaker"},
+  { name: "cat1"}
 ];
 
 const products= 
 [
-  { name: '„‰ Ã ÃœÌœ',category:'skaker',price: 11000 ,pngExist:true },
-  { name: 'product2',category:'„Ê«œ', price: 15000 ,pngExist:false},
-  { name: 'product3',category:'skaker', price: 20000 ,pngExist:true},
-  { name: 'product4',category:'cat3', price: 2500000 ,pngExist:true},
-  { name: 'product5',category:'cat3', price: 30000 ,pngExist:true},
-  { name: 'product6',category:'cat3', price: 35000 ,pngExist:true},
-  { name: 'product7',category:'cat3', price: 35000 ,pngExist:true},
-  { name: 'product8',category:'cat1', price: 35000 ,pngExist:true},
+  { name: "„‰ Ã ÃœÌœ",category:"skaker",price: 11000 ,pngExist:true },
+  { name: "product2",category:"„Ê«œ", price: 15000 ,pngExist:false},
+  { name: "product3",category:"skaker", price: 20000 ,pngExist:true},
+  { name: "product4",category:"cat3", price: 2500000 ,pngExist:true},
+  { name: "product5",category:"cat3", price: 30000 ,pngExist:true},
+  { name: "product6",category:"cat3", price: 35000 ,pngExist:true},
+  { name: "product7",category:"cat3", price: 35000 ,pngExist:true},
+  { name: "product8",category:"cat1", price: 35000 ,pngExist:true},
 ];
 let mycart =
 [
@@ -24,6 +24,8 @@ let mycart =
 ];
 function distribute(cat)
 {
+//alert("\u0699\u0698\u0697");
+//document.getElementById("1").innerHTML="\u0600\u08AA";
 	var page=document.getElementById("page");
 	page.innerHTML="";
 	const topnav=document.querySelectorAll("#topnav a[href]");
