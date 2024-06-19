@@ -22,6 +22,15 @@ let mycart =
 /*  { name: 'product7',quantity:1, price: 40000 },
   { name: 'product8',quantity:2, price: 45000 }*/
 ];
+function test()
+{
+	const var1="דהÊּ ׁÞד1";
+	const var2="דהÊּ ׁÞד3";
+	//document.getElementById("imagename1").innerHTML=document.getElementById("1").innerHTML;
+	//document.getElementById("imagename2").innerHTML=document.getElementById("2").innerHTML;
+	document.getElementById("imagename1").innerHTML=document.getElementById("1").innerHTML;
+	document.getElementById("imagename2").innerHTML=var2;
+}
 function distribute(cat)
 {
 	var page=document.getElementById("page");
