@@ -83,6 +83,8 @@ function distribute(cat)
 }
 function distributeCategories()
 {
+//document.getElementById("1").innerHTML="\u0601\u0602\u0603\u0604\u0605\u0606\u0607\u0608\u0609\u0610\u0611";
+document.getElementById("1").innerHTML="\u0603";
 	var topnav=document.getElementById("myCategories");
 	for (let i = 0; i < categories.length; i++)
 	{
