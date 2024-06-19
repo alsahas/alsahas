@@ -2,7 +2,7 @@
 {
 	body 
 	{
-		font-family: 'Noto Sans Arabic';
+		font-family:Arial;
 		background-image: url('png/background.png');
 		background-repeat:  repeat;
 		background-attachment:fixed;
@@ -50,7 +50,7 @@
 .imagename
 {
 	position:relative;
-	top:-40px;
+	top:-20px;
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5); /* Black see-through */
 	font-size:1rem;
@@ -64,7 +64,7 @@
 .overlay 
 {
 	position:relative;
-	top:-40px;
+	top:-20px;
 	background: rgb(0, 0, 0);
 	background: rgba(0, 0, 0, 0.5); /* Black see-through */
 	font-size:0.8rem;
@@ -87,7 +87,7 @@
 .minus 
 {
 	position:absolute;
-	top: 20px;
+	top: 35px;
 	left: 100px;
 	color: #f1f1f1; 
 	transition: .6s ease;
@@ -97,7 +97,7 @@
 .remove
 {
 	position:absolute;
-	top: 40px;
+	top: 70px;
 	left: 97px;
 	color: #f1f1f1; 
 	transition: .6s ease;
