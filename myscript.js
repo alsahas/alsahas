@@ -1,27 +1,27 @@
 const categories=
 [
-  { name: "ÊÔíÈÓ"},
-  { name: "ãæÇÏ ÛĞÇÆíÉ"},
-  { name: "ãËáÌÇÊ"},
-  { name: "ÈáÇÓÊíßíÇÊ"},
-  { name: "ŞáæÈÇÊ"},
-  { name: "ßÑíãÇÊ ÊÌãíáíÉ"},
-  { name: "ÕÈÛÇÊ"}
+  { name: "ØªØ´ÙŠØ¨Ø³"},
+  { name: "Ù…ÙˆØ§Ø¯ ØºØ°Ø§Ø¦ÙŠØ©"},
+  { name: "Ù…Ø«Ù„Ø¬Ø§Øª"},
+  { name: "Ø¨Ù„Ø§Ø³ØªÙŠÙƒÙŠØ§Øª"},
+  { name: "Ù‚Ù„ÙˆØ¨Ø§Øª"},
+  { name: "ÙƒØ±ÙŠÙ…Ø§Øª ØªØ¬Ù…ÙŠÙ„ÙŠØ©"},
+  { name: "ØµØ¨ØºØ§Øª"}
 ];
 
 const products= 
 [
-  { name: "ãÇÓÊÑ ÌÈäÉ 20 Û",category:"ÊÔíÈÓ",price: 20000 ,pngExist:true },
-  { name: "ãÇÓÊÑ İáİá ÍÇÑ ßÈíÑ",category:"ÊÔíÈÓ",price: 50000 ,pngExist:true },
-  { name: "ãÇÓÊÑ ãáÍ æÎá 180 Û",category:"ÊÔíÈÓ",price: 90000 ,pngExist:true },
-  { name: "ÔÇí ÑÃÓ ÇáÍÕÇä 500 Û",category:"ãæÇÏ ÛĞÇÆíÉ",price: 400000 ,pngExist:true },
-  { name: "ÈíÈÓí ÌãÈæ",category:"ãæÇÏ ÛĞÇÆíÉ", price: 100000 ,pngExist:true},
-  { name: "ÏæáÓí ÈæÙÉ ßÑÇãíá",category:"ãËáÌÇÊ", price: 70000 ,pngExist:true},
-  { name: "ÏæáÓí İÓÊŞ",category:"ÊÔíÈÓ", price: 70000 ,pngExist:true},
-  { name: "Dolsi Veneto Almond",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
-  { name: "Dolsi Veneto Hazelnut",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
-  { name: "Dolsi Veneto Pistachio",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
-  { name: "ßÈÇíÇÊ ÈáÇÓÊíß",category:"ÈáÇÓÊíßíÇÊ", price: 1000 ,pngExist:true}
+  { name: "Ù…Ø§Ø³ØªØ± Ø¬Ø¨Ù†Ø© 20 Øº",category:"ØªØ´ÙŠØ¨Ø³",price: 20000 ,pngExist:true },
+  { name: "Ù…Ø§Ø³ØªØ± ÙÙ„ÙÙ„ Ø­Ø§Ø± ÙƒØ¨ÙŠØ±",category:"ØªØ´ÙŠØ¨Ø³",price: 50000 ,pngExist:true },
+  { name: "Ù…Ø§Ø³ØªØ± Ù…Ù„Ø­ ÙˆØ®Ù„ 180 Øº",category:"ØªØ´ÙŠØ¨Ø³",price: 90000 ,pngExist:true },
+  { name: "Ø´Ø§ÙŠ Ø±Ø£Ø³ Ø§Ù„Ø­ØµØ§Ù† 500 Øº",category:"Ù…ÙˆØ§Ø¯ ØºØ°Ø§Ø¦ÙŠØ©",price: 400000 ,pngExist:true },
+  { name: "Ø¨ÙŠØ¨Ø³ÙŠ Ø¬Ù…Ø¨Ùˆ",category:"Ù…ÙˆØ§Ø¯ ØºØ°Ø§Ø¦ÙŠØ©", price: 100000 ,pngExist:true},
+  { name: "Ø¯ÙˆÙ„Ø³ÙŠ Ø¨ÙˆØ¸Ø© ÙƒØ±Ø§Ù…ÙŠÙ„",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 70000 ,pngExist:true},
+  { name: "Ø¯ÙˆÙ„Ø³ÙŠ ÙØ³ØªÙ‚",category:"ØªØ´ÙŠØ¨Ø³", price: 70000 ,pngExist:true},
+  { name: "Dolsi Veneto Almond",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 120000 ,pngExist:true},
+  { name: "Dolsi Veneto Hazelnut",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 120000 ,pngExist:true},
+  { name: "Dolsi Veneto Pistachio",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 120000 ,pngExist:true},
+  { name: "ÙƒØ¨Ø§ÙŠØ§Øª Ø¨Ù„Ø§Ø³ØªÙŠÙƒ",category:"Ø¨Ù„Ø§Ø³ØªÙŠÙƒÙŠØ§Øª", price: 1000 ,pngExist:true}
 ];
 let mycart =
 [
