@@ -1,15 +1,15 @@
 const categories=
 [
   { name: "cat3"},
-  { name: "ãæÇÏ"},
+  { name: "Ù…ÙˆØ§Ø¯"},
   { name: "skaker"},
   { name: "cat1"}
 ];
 
 const products= 
 [
-  { name: "ãäÊÌ ÌÏíÏ",category:"skaker",price: 11000 ,pngExist:true },
-  { name: "product2",category:"ãæÇÏ", price: 15000 ,pngExist:false},
+  { name: "Ù…Ù†ØªØ¬ Ø¬Ø¯ÙŠØ¯",category:"skaker",price: 11000 ,pngExist:true },
+  { name: "product2",category:"Ù…ÙˆØ§Ø¯", price: 15000 ,pngExist:false},
   { name: "product3",category:"skaker", price: 20000 ,pngExist:true},
   { name: "product4",category:"cat3", price: 2500000 ,pngExist:true},
   { name: "product5",category:"cat3", price: 30000 ,pngExist:true},
