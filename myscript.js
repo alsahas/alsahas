@@ -1,24 +1,27 @@
 const categories=
 [
-  { name: "Ø¨Ù‡Ø§Ø±Ø§Øª"},
-  { name: "Ø­Ø¨ÙˆØ¨"},
-  { name: "Ø£Ø¹Ø´Ø§Ø¨"},
-  { name: "Ø¨Ù„Ø§Ø³ØªÙŠÙƒÙŠØ§Øª"},
-  { name: "Ù‚Ù„ÙˆØ¨Ø§Øª"},
-  { name: "ÙƒØ±ÙŠÙ…Ø§Øª ØªØ¬Ù…ÙŠÙ„ÙŠØ©"},
-  { name: "ØµØ¨ØºØ§Øª"}
+  { name: "ÊÔíÈÓ"},
+  { name: "ãæÇÏ ÛĞÇÆíÉ"},
+  { name: "ãËáÌÇÊ"},
+  { name: "ÈáÇÓÊíßíÇÊ"},
+  { name: "ŞáæÈÇÊ"},
+  { name: "ßÑíãÇÊ ÊÌãíáíÉ"},
+  { name: "ÕÈÛÇÊ"}
 ];
 
 const products= 
 [
-  { name: "Ù…Ù†ØªØ¬ Ø¬Ø¯ÙŠØ¯",category:"Ø¨Ù‡Ø§Ø±Ø§Øª",price: 11000 ,pngExist:true },
-  { name: "product2",category:"Ø­Ø¨ÙˆØ¨", price: 15000 ,pngExist:false},
-  { name: "product3",category:"skaker", price: 20000 ,pngExist:true},
-  { name: "product4",category:"Ø£Ø¹Ø´Ø§Ø¨", price: 2500000 ,pngExist:true},
-  { name: "product5",category:"Ø£Ø¹Ø´Ø§Ø¨", price: 30000 ,pngExist:true},
-  { name: "product6",category:"Ø­Ø¨ÙˆØ¨", price: 35000 ,pngExist:true},
-  { name: "product7",category:"Ù‚Ù„ÙˆØ¨Ø§Øª", price: 35000 ,pngExist:true},
-  { name: "product8",category:"ØµØ¨ØºØ§Øª", price: 35000 ,pngExist:true},
+  { name: "ãÇÓÊÑ ÌÈäÉ 20 Û",category:"ÊÔíÈÓ",price: 20000 ,pngExist:true },
+  { name: "ãÇÓÊÑ İáİá ÍÇÑ ßÈíÑ",category:"ÊÔíÈÓ",price: 50000 ,pngExist:true },
+  { name: "ãÇÓÊÑ ãáÍ æÎá 180 Û",category:"ÊÔíÈÓ",price: 90000 ,pngExist:true },
+  { name: "ÔÇí ÑÃÓ ÇáÍÕÇä 500 Û",category:"ãæÇÏ ÛĞÇÆíÉ",price: 400000 ,pngExist:true },
+  { name: "ÈíÈÓí ÌãÈæ",category:"ãæÇÏ ÛĞÇÆíÉ", price: 100000 ,pngExist:true},
+  { name: "ÏæáÓí ÈæÙÉ ßÑÇãíá",category:"ãËáÌÇÊ", price: 70000 ,pngExist:true},
+  { name: "ÏæáÓí İÓÊŞ",category:"ÊÔíÈÓ", price: 70000 ,pngExist:true},
+  { name: "Dolsi Veneto Almond",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
+  { name: "Dolsi Veneto Hazelnut",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
+  { name: "Dolsi Veneto Pistachio",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
+  { name: "ßÈÇíÇÊ ÈáÇÓÊíß",category:"ÈáÇÓÊíßíÇÊ", price: 1000 ,pngExist:true}
 ];
 let mycart =
 [
@@ -27,8 +30,6 @@ let mycart =
 ];
 function distribute(cat)
 {
-//alert("\u0699\u0698\u0697");
-//document.getElementById("1").innerHTML="\u0600\u08AA";
 	var page=document.getElementById("page");
 	page.innerHTML="";
 	const topnav=document.querySelectorAll("#topnav a[href]");
