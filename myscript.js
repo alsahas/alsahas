@@ -1,21 +1,24 @@
 const categories=
 [
-  { name: "cat3"},
-  { name: "مواد"},
-  { name: "skaker"},
-  { name: "cat1"}
+  { name: "بهارات"},
+  { name: "حبوب"},
+  { name: "أعشاب"},
+  { name: "بلاستيكيات"},
+  { name: "قلوبات"},
+  { name: "كريمات تجميلية"},
+  { name: "صبغات"}
 ];
 
 const products= 
 [
-  { name: "منتج جديد",category:"skaker",price: 11000 ,pngExist:true },
-  { name: "product2",category:"مواد", price: 15000 ,pngExist:false},
+  { name: "منتج جديد",category:"بهارات",price: 11000 ,pngExist:true },
+  { name: "product2",category:"حبوب", price: 15000 ,pngExist:false},
   { name: "product3",category:"skaker", price: 20000 ,pngExist:true},
-  { name: "product4",category:"cat3", price: 2500000 ,pngExist:true},
-  { name: "product5",category:"cat3", price: 30000 ,pngExist:true},
-  { name: "product6",category:"cat3", price: 35000 ,pngExist:true},
-  { name: "product7",category:"cat3", price: 35000 ,pngExist:true},
-  { name: "product8",category:"cat1", price: 35000 ,pngExist:true},
+  { name: "product4",category:"أعشاب", price: 2500000 ,pngExist:true},
+  { name: "product5",category:"أعشاب", price: 30000 ,pngExist:true},
+  { name: "product6",category:"حبوب", price: 35000 ,pngExist:true},
+  { name: "product7",category:"قلوبات", price: 35000 ,pngExist:true},
+  { name: "product8",category:"صبغات", price: 35000 ,pngExist:true},
 ];
 let mycart =
 [
