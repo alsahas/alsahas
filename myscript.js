@@ -1,33 +1,48 @@
 const categories=
 [
-  { name: "ØªØ´ÙŠØ¨Ø³"},
-  { name: "Ù…ÙˆØ§Ø¯ ØºØ°Ø§Ø¦ÙŠØ©"},
-  { name: "Ù…Ø«Ù„Ø¬Ø§Øª"},
-  { name: "Ø¨Ù„Ø§Ø³ØªÙŠÙƒÙŠØ§Øª"},
-  { name: "Ù‚Ù„ÙˆØ¨Ø§Øª"},
-  { name: "ÙƒØ±ÙŠÙ…Ø§Øª ØªØ¬Ù…ÙŠÙ„ÙŠØ©"},
-  { name: "ØµØ¨ØºØ§Øª"}
+  { name: "ÊÔíÈÓ"},
+  { name: "ãæÇÏ ÛĞÇÆíÉ"},
+  { name: "ãËáÌÇÊ"},
+  { name: "ÈáÇÓÊíßíÇÊ"},
+  { name: "ŞáæÈÇÊ"},
+  { name: "ßÑíãÇÊ ÊÌãíáíÉ"},
+  { name: "ÕÈÛÇÊ"}
 ];
 
 const products= 
 [
-  { name: "Ù…Ø§Ø³ØªØ± Ø¬Ø¨Ù†Ø© 20 Øº",category:"ØªØ´ÙŠØ¨Ø³",price: 20000 ,pngExist:true },
-  { name: "Ù…Ø§Ø³ØªØ± ÙÙ„ÙÙ„ Ø­Ø§Ø± ÙƒØ¨ÙŠØ±",category:"ØªØ´ÙŠØ¨Ø³",price: 50000 ,pngExist:true },
-  { name: "Ù…Ø§Ø³ØªØ± Ù…Ù„Ø­ ÙˆØ®Ù„ 180 Øº",category:"ØªØ´ÙŠØ¨Ø³",price: 90000 ,pngExist:true },
-  { name: "Ø´Ø§ÙŠ Ø±Ø£Ø³ Ø§Ù„Ø­ØµØ§Ù† 500 Øº",category:"Ù…ÙˆØ§Ø¯ ØºØ°Ø§Ø¦ÙŠØ©",price: 400000 ,pngExist:true },
-  { name: "Ø¨ÙŠØ¨Ø³ÙŠ Ø¬Ù…Ø¨Ùˆ",category:"Ù…ÙˆØ§Ø¯ ØºØ°Ø§Ø¦ÙŠØ©", price: 100000 ,pngExist:true},
-  { name: "Ø¯ÙˆÙ„Ø³ÙŠ Ø¨ÙˆØ¸Ø© ÙƒØ±Ø§Ù…ÙŠÙ„",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 70000 ,pngExist:true},
-  { name: "Ø¯ÙˆÙ„Ø³ÙŠ ÙØ³ØªÙ‚",category:"ØªØ´ÙŠØ¨Ø³", price: 70000 ,pngExist:true},
-  { name: "Dolsi Veneto Almond",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 120000 ,pngExist:true},
-  { name: "Dolsi Veneto Hazelnut",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 120000 ,pngExist:true},
-  { name: "Dolsi Veneto Pistachio",category:"Ù…Ø«Ù„Ø¬Ø§Øª", price: 120000 ,pngExist:true},
-  { name: "ÙƒØ¨Ø§ÙŠØ§Øª Ø¨Ù„Ø§Ø³ØªÙŠÙƒ",category:"Ø¨Ù„Ø§Ø³ØªÙŠÙƒÙŠØ§Øª", price: 1000 ,pngExist:true}
+  { id:1,name: "ãÇÓÊÑ ÌÈäÉ 20 Û",category:"ÊÔíÈÓ",price: 20000 ,pngExist:true },
+  { id:2,name: "ãÇÓÊÑ İáİá ÍÇÑ ßÈíÑ",category:"ÊÔíÈÓ",price: 50000 ,pngExist:true },
+  { id:3,name: "ãÇÓÊÑ ãáÍ æÎá 180 Û",category:"ÊÔíÈÓ",price: 90000 ,pngExist:true },
+  { id:4,name: "ÔÇí ÑÃÓ ÇáÍÕÇä 500 Û",category:"ãæÇÏ ÛĞÇÆíÉ",price: 400000 ,pngExist:true },
+  { id:5,name: "ÈíÈÓí ÌãÈæ",category:"ãæÇÏ ÛĞÇÆíÉ", price: 100000 ,pngExist:true},
+  { id:6,name: "ÏæáÓí ÈæÙÉ ßÑÇãíá",category:"ãËáÌÇÊ", price: 70000 ,pngExist:true},
+  { id:7,name: "ÏæáÓí İÓÊŞ",category:"ÊÔíÈÓ", price: 70000 ,pngExist:true},
+  { id:8,name: "Dolsi Veneto Almond",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
+  { id:9,name: "Dolsi Veneto Hazelnut",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
+  { id:10,name: "Dolsi Veneto Pistachio",category:"ãËáÌÇÊ", price: 120000 ,pngExist:true},
+  { id:11,name: "ßÈÇíÇÊ ÈáÇÓÊíß",category:"ÈáÇÓÊíßíÇÊ", price: 1000 ,pngExist:true}
 ];
 let mycart =
 [
 /*  { name: 'product7',quantity:1, price: 40000 },
   { name: 'product8',quantity:2, price: 45000 }*/
 ];
+function getValue()
+{
+	var cus=document.getElementById("customername").innerHTML;
+	var pho=document.getElementById("phonenumber").innerHTML;
+	var add=document.getElementById("address").innerHTML;
+	var txt="alsaha314\n"+updateTotal()+"\n"+cus+"\n"+pho+"\n"+add+"\n";
+	for (let i = 0; i < mycart.length; i++)
+	{
+		const prod = mycart[i];
+		txt+=prod.id+":"+prod.quantity+"\n";
+	}
+	document.getElementById("subject").value="alsaha313";
+	document.getElementById("message").value=txt+"alsaha315";
+	return txt;
+}
 function distribute(cat)
 {
 	var page=document.getElementById("page");
@@ -54,7 +69,7 @@ function distribute(cat)
 			var div= document.createElement("div");
 			div.className="container";
 			var a=document.createElement("a");
-			a.href="javascript:addProductToCart('"+product.name+"',"+product.price+","+product.pngExist+");";
+			a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
 			if(product.pngExist)a.innerHTML="<img class='image' src='png/products/"+product.name+".png' width=100 height=100>";
 			else a.innerHTML="<img class='image' src='png/products/no-png.png' width=100 height=100>";
 			div.append(a);
@@ -252,7 +267,66 @@ function quantity(prodname)
 		alert("Only Numbers is Allowed !!!");
 	}
 }
-function addProductToCart(nom,pr,exist)
+function getPhone()
+{
+	let phone = prompt("Please enter your phone number:must be of 8 digits e.g. 76123456");
+	phone=phone.trim();
+	if(phone=="")
+	{
+		alert("Empty Value Not Allowed !!!");
+	}
+	else if (phone != null && !isNaN(phone)) 
+	{
+		if(Number(phone)>0&&phone.length==8)
+		{
+			document.getElementById("phonenumber").innerHTML=phone;
+			getCustomerName();
+		}	
+		else alert("You Must Enter Number of 8 digits !!!");
+	}
+	else
+	{
+		alert("Only Numbers is Allowed !!!");
+	}
+}
+function getCustomerName()
+{
+	let customer = prompt("Please enter your name");
+	customer=customer.trim();
+	if(customer=="")
+	{
+		alert("Empty Value Not Allowed !!!");
+	}
+	else if (customer.length<30) 
+	{
+		document.getElementById("customername").innerHTML=customer;
+		getAddress();
+	}
+	else
+	{
+		alert("Name is too long must be less than 30 !!!");
+	}
+}
+function getAddress()
+{
+	let address = prompt("Please enter your address");
+	address=address.trim();
+	if(address=="")
+	{
+		alert("Empty Value Not Allowed !!!");
+	}
+	else if (address.length<60) 
+	{
+		document.getElementById("address").innerHTML=address;
+		getValue();
+		document.form.submit();
+	}
+	else
+	{
+		alert("Address is too long must be less than 60 !!!");
+	}
+}
+function addProductToCart(idd,nom,pr,exist)
 {
 	var dict = [];
 	let found=false;
@@ -264,7 +338,7 @@ function addProductToCart(nom,pr,exist)
 	}
 	if(!found)
 	{
-		let row={name:nom,quantity:1,price:pr,pngExist:exist};
+		let row={id:idd,name:nom,quantity:1,price:pr,pngExist:exist};
 		dict.push(row);
 		mycart = dict.slice();
 		document.getElementById("cart"+nom).style.display = "block";
@@ -295,6 +369,17 @@ function updateTotal()
 	}
 	var b=document.getElementById("total");
 	b.innerHTML=""+numberComma(total);
+	if(mycart.length==0)
+	{
+		var f=document.getElementById("form");
+		f.style="display:none;";
+	}
+	else 
+	{
+		var f=document.getElementById("form");
+		f.style="display:block;";
+	}
+	return total;
 }
 function updateMyCartQuantity(name,quant)
 {
