@@ -225,7 +225,7 @@ function quantity(prodname)
 	quantity=quantity.trim();
 	if(quantity=="")
 	{
-		alert("Empty Value Not Allowed !!!");
+		alert("قيمة فارغة غير مسموحة !!!");
 	}
 	else if (quantity != null && !isNaN(quantity)) 
 	{
@@ -235,20 +235,20 @@ function quantity(prodname)
 			document.getElementById(prodname).innerHTML ="&nbsp&nbsp"+quantity+"&nbsp&nbsp";
 			document.getElementById(prodname.substring(8,prodname.length)).innerHTML =numberComma(getPriceMyCart(prodname.substring(8,prodname.length))*quantity)+" L.L.";
 		}	
-		else alert("You Must Enter Number Greater Than Zero !!!");
+		else alert("يجب إدخال رقم أكبر من صفر !!!");
 	}
 	else
 	{
-		alert("Only Numbers is Allowed !!!");
+		alert("مسموح إدخال أرقام فقط !!!");
 	}
 }
 function getPhone()
 {
-	let phone = prompt("Please enter your phone number:must be of 8 digits e.g. 76123456");
+	let phone = prompt("أدخل رقم تلفونك، يجب أن يكون من ثمانية أرقام، مثال:76123456");
 	phone=phone.trim();
 	if(phone=="")
 	{
-		alert("Empty Value Not Allowed !!!");
+		alert("قيمة فارغة غير مسموحة !!!");
 	}
 	else if (phone != null && !isNaN(phone)) 
 	{
@@ -257,20 +257,20 @@ function getPhone()
 			document.getElementById("phonenumber").innerHTML=phone;
 			getCustomerName();
 		}	
-		else alert("You Must Enter Number of 8 digits !!!");
+		else alert("يجب إدخال عدد من ثمانية أرقام !!!");
 	}
 	else
 	{
-		alert("Only Numbers is Allowed !!!");
+		alert("مسموح إدخال أرقام فقط !!!");
 	}
 }
 function getCustomerName()
 {
-	let customer = prompt("Please enter your name");
+	let customer = prompt("الرجاء أدخل إسمك");
 	customer=customer.trim();
 	if(customer=="")
 	{
-		alert("Empty Value Not Allowed !!!");
+		alert("قيمة فارغة غير مسموحة !!!");
 	}
 	else if (customer.length<30) 
 	{
@@ -279,7 +279,7 @@ function getCustomerName()
 	}
 	else
 	{
-		alert("Name is too long must be less than 30 !!!");
+		alert("إسم طويل يجب أن يكون أقل من 30 حرف !!!");
 	}
 }
 function getAddress()
@@ -288,7 +288,7 @@ function getAddress()
 	address=address.trim();
 	if(address=="")
 	{
-		alert("Empty Value Not Allowed !!!");
+		alert("قيمة فارغة غير مسموحة !!!");
 	}
 	else if (address.length<60) 
 	{
@@ -298,7 +298,7 @@ function getAddress()
 	}
 	else
 	{
-		alert("Address is too long must be less than 60 !!!");
+		alert("عنوان طويل يجب أن يكون أقل من 60 حرف !!!");
 	}
 }
 function addProductToCart(idd,nom,pr,exist)
