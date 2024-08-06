@@ -7,6 +7,12 @@
 </head>
 <body onload="distributeCategories();">
 <!-- Simulate a smartphone / tablet look -->
+<div id="search">
+	<img src="png/searchempty.png"width="300"height="45"style="position:relative;right:10px">
+	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
+	style="font-family:Noto Naskh Arabic;font-size:20px;position:absolute;width:235px;height:23px;top:16px;left:8px;z-index:999;">
+</div>
+
 <div id="main"class="mobile-container">
 <!-- Top Navigation Menu -->
 <div id="topnav"class="topnav">
