@@ -75,6 +75,57 @@ function distribute(cat)
 		}
 	}
 }
+function distributeAll()
+{
+	var page=document.getElementById("page");
+	page.innerHTML="";
+	const topnav=document.querySelectorAll("#topnav a[href]");
+	for(let j=0;j<topnav.length;j++)topnav[j].className="";
+	if(document.getElementById('inputsearch').value.length==0)
+	{
+	}
+	else
+	{
+		for (let i = 0; i < products.length; i++) 
+		{
+			const product = products[i];
+			if(products[i].name.includes(document.getElementById('inputsearch').value))
+			{
+				var div= document.createElement("div");
+				div.className="container";
+				var a=document.createElement("a");
+				a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
+				if(product.pngExist)a.innerHTML="<img class='image' src='png/products/"+product.name+".png' width=100 height=100>";
+				else a.innerHTML="<img class='image' src='png/products/no-png.png' width=100 height=100>";
+				div.append(a);
+				
+				let vision="";
+				if(existInMyCart(product.name))vision="block";
+				else vision="none";
+				
+				a=document.createElement("a");
+				a.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
+				a.innerHTML="<img id='cart"+product.name+"' class='cart' style='display:"+vision+"'src='png/cart.png' width=100 height=100>";
+				div.append(a);
+				
+				var p=document.createElement("p");
+				p.className="imagename";
+				p.id="imagename";
+				p.innerHTML=product.name;
+				div.append(p);
+				
+				p=document.createElement("p");
+				p.className="overlay";
+				p.id="overlay";
+				p.style="font-size:0.8rem;";
+				p.innerHTML=numberComma(product.price)+" L.L.";
+				div.append(p);
+				
+				page.append(div);
+			}
+		}
+	}
+}
 function distributeCategories()
 {
 	var topnav=document.getElementById("myCategories");
@@ -225,7 +276,7 @@ function quantity(prodname)
 	quantity=quantity.trim();
 	if(quantity=="")
 	{
-		alert("قيمة فارغة غير مسموحة !!!");
+		alert("Empty Value Not Allowed !!!");
 	}
 	else if (quantity != null && !isNaN(quantity)) 
 	{
@@ -235,20 +286,20 @@ function quantity(prodname)
 			document.getElementById(prodname).innerHTML ="&nbsp&nbsp"+quantity+"&nbsp&nbsp";
 			document.getElementById(prodname.substring(8,prodname.length)).innerHTML =numberComma(getPriceMyCart(prodname.substring(8,prodname.length))*quantity)+" L.L.";
 		}	
-		else alert("يجب إدخال رقم أكبر من صفر !!!");
+		else alert("You Must Enter Number Greater Than Zero !!!");
 	}
 	else
 	{
-		alert("مسموح إدخال أرقام فقط !!!");
+		alert("Only Numbers is Allowed !!!");
 	}
 }
 function getPhone()
 {
-	let phone = prompt("أدخل رقم تلفونك، يجب أن يكون من ثمانية أرقام، مثال:76123456");
+	let phone = prompt("Please enter your phone number:must be of 8 digits e.g. 76123456");
 	phone=phone.trim();
 	if(phone=="")
 	{
-		alert("قيمة فارغة غير مسموحة !!!");
+		alert("Empty Value Not Allowed !!!");
 	}
 	else if (phone != null && !isNaN(phone)) 
 	{
@@ -257,20 +308,20 @@ function getPhone()
 			document.getElementById("phonenumber").innerHTML=phone;
 			getCustomerName();
 		}	
-		else alert("يجب إدخال عدد من ثمانية أرقام !!!");
+		else alert("You Must Enter Number of 8 digits !!!");
 	}
 	else
 	{
-		alert("مسموح إدخال أرقام فقط !!!");
+		alert("Only Numbers is Allowed !!!");
 	}
 }
 function getCustomerName()
 {
-	let customer = prompt("الرجاء أدخل إسمك");
+	let customer = prompt("Please enter your name");
 	customer=customer.trim();
 	if(customer=="")
 	{
-		alert("قيمة فارغة غير مسموحة !!!");
+		alert("Empty Value Not Allowed !!!");
 	}
 	else if (customer.length<30) 
 	{
@@ -279,7 +330,7 @@ function getCustomerName()
 	}
 	else
 	{
-		alert("إسم طويل يجب أن يكون أقل من 30 حرف !!!");
+		alert("Name is too long must be less than 30 !!!");
 	}
 }
 function getAddress()
@@ -288,7 +339,7 @@ function getAddress()
 	address=address.trim();
 	if(address=="")
 	{
-		alert("قيمة فارغة غير مسموحة !!!");
+		alert("Empty Value Not Allowed !!!");
 	}
 	else if (address.length<60) 
 	{
@@ -298,7 +349,7 @@ function getAddress()
 	}
 	else
 	{
-		alert("عنوان طويل يجب أن يكون أقل من 60 حرف !!!");
+		alert("Address is too long must be less than 60 !!!");
 	}
 }
 function addProductToCart(idd,nom,pr,exist)
@@ -423,7 +474,6 @@ const categories=
 { name: 'أجبان'},
 { name: 'مواد غذائية'},
 { name: 'مشروبات'},
-{ name: 'بزورات'},
 { name: 'منظفات'},
 { name: 'مواد أخرى'},
 { name: 'مياه'},
@@ -433,11 +483,9 @@ const products=
 [
 { id: 1,name:'صلصة يمامة 660غ',category:'مواد غذائية',price:159300,pngExist:false},
 { id: 2,name:'صلصة bergamo 700g',category:'مواد غذائية',price:67500,pngExist:false},
-{ id: 3,name:'زهورات العطارةالكركديه',category:'أعشاب',price:78300,pngExist:false},
 { id: 4,name:'زهورات العطارة خ ملينة',category:'أعشاب',price:76500,pngExist:false},
 { id: 5,name:'زهورات العطارة موريجنا',category:'أعشاب',price:76500,pngExist:false},
 { id: 6,name:'زهورات العطارة  شامية',category:'أعشاب',price:78300,pngExist:false},
-{ id: 7,name:'زهورات العطارة زنجبيل وعسل',category:'أعشاب',price:76500,pngExist:false},
 { id: 8,name:'زهورات العطارة بابونج',category:'أعشاب',price:76500,pngExist:false},
 { id: 9,name:'زهورات العطارة كمون وليمون',category:'أعشاب',price:76500,pngExist:false},
 { id: 10,name:'غنية مدور 8',category:'أجبان',price:36000,pngExist:false},
@@ -445,7 +493,7 @@ const products=
 { id: 12,name:'سنيتا جلنار',category:'مواد أخرى',price:58500,pngExist:false},
 { id: 13,name:'معجون غادةحلاقة',category:'منظفات',price:90000,pngExist:false},
 { id: 14,name:'زيت bell food 3 liter',category:'مواد غذائية',price:423000,pngExist:false},
-{ id: 15,name:'new park chocolate',category:'مشروبات',price:9000,pngExist:false},
+{ id: 15,name:'new park chocolate',category:'f',price:9000,pngExist:false},
 { id: 16,name:'new park strawberry',category:'مشروبات',price:9000,pngExist:false},
 { id: 17,name:'new park biscuits',category:'مشروبات',price:9000,pngExist:false},
 { id: 18,name:'nescafe 47g',category:'مشروبات',price:90000,pngExist:false},
