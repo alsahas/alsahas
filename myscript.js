@@ -83,14 +83,17 @@ function distributeAll()
 	for(let j=0;j<topnav.length;j++)topnav[j].className="";
 	if(document.getElementById('inputsearch').value.length==0)
 	{
+		document.getElementById('numberitems').innerHTML="";
 	}
 	else
 	{
+		var items=0;
 		for (let i = 0; i < products.length; i++) 
 		{
 			const product = products[i];
-			if(products[i].name.includes(document.getElementById('inputsearch').value))
+			if(products[i].name.toLowerCase().includes(document.getElementById('inputsearch').value.toLowerCase()))
 			{
+				items++;
 				var div= document.createElement("div");
 				div.className="container";
 				var a=document.createElement("a");
@@ -123,6 +126,8 @@ function distributeAll()
 				
 				page.append(div);
 			}
+			document.getElementById('numberitems').innerHTML="items found : "+items;
+
 		}
 	}
 }
