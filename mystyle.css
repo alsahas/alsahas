@@ -28,7 +28,7 @@
   margin: auto;
   background-color: #555;
   height: auto;
-  color: white;
+  color: black;
   border-radius: 10px;
 }
 .page 
@@ -150,5 +150,5 @@ a:link
 .active 
 {
   background-color: #04AA6D;
-  color: white;
+  color: black;
 }
