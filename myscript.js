@@ -152,14 +152,14 @@ function distribute(cat)
 			var p=document.createElement("p");
 			p.className="imagename";
 			p.id="imagename";
-//			p.style="font-size:1.5vw;";
+			p.style="font-size:0.8vw;";
 			p.innerHTML=product.name;
 			div.append(p);
 			
 			p=document.createElement("p");
 			p.className="overlay";
 			p.id="overlay";
-//			p.style="font-size:1.5vw;";
+			p.style="font-size:0.8vw;";
 			p.innerHTML=numberComma(product.price)+" L.L.";
 			div.append(p);
 			
