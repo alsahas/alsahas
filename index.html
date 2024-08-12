@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <link rel="stylesheet" href="mystyle.css">
 <link rel="stylesheet" href="modelstyle.css">
 <link href='https://fonts.googleapis.com/css?family=Noto Naskh Arabic' rel='stylesheet'>
 <script type="text/javascript" src="myscript.js"></script> 
 <script defer src="modelscript.js"></script>
 </head>
-<body onload="distributeCategories();">
+<body onload="distributeCategories();disableButton();">
 <!-- Simulate a smartphone / tablet look -->
 <div id="search">
 	<img src="png/searchempty.png"width="300"height="45"style="position:relative;right:10px">
@@ -26,15 +27,15 @@
 
 <div id="page" class="page">
 	
-<p style="display:none;">بس</p>
+<p style="display:none;"></p>
 </div>
 <!-- End smartphone / tablet look -->
-<form name="form"lang="ar" action="https://formspree.io/f/xjkbyvpd"method="POST">
+<form name="form2"lang="ar" action="https://formspree.io/f/xjkbyvpd"method="POST">
     <input type="email" name="email"value="robotouta@gmail.com"style="display:none;">
 	<input type="subject"id="subject" name="subject"value=""style="display:none;">
     <textarea id="message" name="message"value=""style="display:none;"></textarea>
 </form>	
-<img data-modal-target="#modal"id="form"type="submit"style="display:none;"onclick="getPone()" src="png/deliver.png">
+<img data-modal-target="#modal"id="form"type="submit"style="display:none;" src="png/deliver.png">
 <p id="customername"style="display:none;"></p>
 <p id="phonenumber"style="display:none;"></p>
 <p id="address"style="display:none;"></p>
@@ -46,11 +47,12 @@
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;تسجيل تفاصيل التوصيل</div>
 		<button data-close-button class="close-button">&times;</button>
 	</div>
-	<div style="float: right;"class="modal-body">
-		<h3 style="font-size:25px;"><input style="font-size:24px;width:70%;height:35px;"id="name"type="text" name="name"value="">&nbsp;&nbsp;الإسم الكامل</h3>
-		<h3 style="font-size:25px;"><input style="font-size:24px;width:70%;height:35px;"id="phone"type="text" name="name"value="">&nbsp;&nbsp;رقم التلفون</h3>
-		<h3 style="font-size:25px;"><input style="font-size:21px;width:70%;height:35px;"id="address"type="text" name="name"value="">&nbsp;&nbsp;العنوان</h3>
-		<button style="font-size:25px;position:relative;left:30%;">BUY-شراء</button>
+	<div style="float:right;"class="modal-body">
+		<h3 style="font-size:25px;"><input onblur="checkGoodName(name);checkSubmit();"style="font-size:21px;width:70%;height:35px;"id="name"type="text" name="name"value="">&nbsp;&nbsp;الإسم الكامل</h3>
+		<h3 style="font-size:25px;"><input onblur="checkGood1();checkSubmit();"onfocus="emptyPhone1()"onkeyup="checkPhone1();"style="font-size:21px;width:10%;height:35px;"id="phone1"type="text" name="phone1"value="">&nbsp;/
+									<input onblur="checkGood2();checkSubmit();"onfocus="emptyPhone2();checkPhone();"onkeyup="checkPhone2();"style="font-size:21px;width:40%;height:35px;"id="phone2"type="text" name="phone2"value="">&nbsp;&nbsp;رقم التلفون</h3>
+		<h3 style="font-size:25px;"><input style="font-size:21px;width:70%;height:35px;"id="address2"type="text" name="address2"value="">&nbsp;&nbsp;العنوان</h3>
+		<button onclick="setValue();getValue();document.form2.submit();"id="button1"style="font-size:25px;position:relative;left:30%;">BUY-شراء</button>
 	</div>
 </div>
 <div id="modeloverlay"></div>
