@@ -146,20 +146,20 @@ function distribute(cat)
 			
 			a=document.createElement("a");
 			a.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
-			a.innerHTML="<img id='cart"+product.name+"' class='cart' style='display:"+vision+"'src='png/cart.png' width=100 height=100>";
+			a.innerHTML="<img id='cart"+product.name+"' class='cart' style='display:"+vision+"'src='png/cart.png'>";
 			div.append(a);
 			
 			var p=document.createElement("p");
 			p.className="imagename";
 //			p.id="imagename";
-			p.style="font-size:21px;";
+			p.style="font-size:21px;white-space: nowrap;";
 			p.innerHTML=product.name;
 			div.append(p);
 			
 			p=document.createElement("p");
 			p.className="overlay";
 			p.id="overlay";
-			p.style="font-size:21px;";
+			p.style="font-size:21px;white-space: nowrap;";
 			p.innerHTML=numberComma(product.price)+" L.L.";
 			div.append(p);
 			
@@ -316,12 +316,14 @@ function distributeMyCart()
 			//<p id="imagename"class="imagename">name</p>
 			p=document.createElement("p");
 			p.className="imagename";
+			p.style="font-size:21px;";
 			p.innerHTML=product.name;
 			div.append(p);
 			
 			//<p id="product2"class="overlay">150,000,000 L.L.</p>
 			p=document.createElement("p");
 			p.id=product.name;
+			p.style="font-size:21px;";
 			p.className="overlay";
 			p.innerHTML=numberComma(product.price*product.quantity)+" L.L.";
 			div.append(p);
