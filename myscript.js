@@ -7,7 +7,7 @@ let mycart =
 function setValue()
 {
 	document.getElementById("customername").innerHTML=document.getElementById("name").value;
-	document.getElementById("phonenumber").innerHTML=document.getElementById("phone1").value+document.getElementById("phone2").value;
+	document.getElementById("phonenumber").innerHTML=fix(document.getElementById("phone1").value)+fix(document.getElementById("phone2").value);
 	document.getElementById("address").innerHTML=document.getElementById("address2").value;
 }
 function getValue()
@@ -24,6 +24,30 @@ function getValue()
 	document.getElementById("subject").value="alsaha313";
 	document.getElementById("message").value=txt+"alsaha315";
 	return txt;
+}
+function fix(number)
+{
+	var fixed="";
+	var cod=-1;
+	for (let i = 0; i < number.length; i++)
+	{
+		cod=number[i].charCodeAt(0);
+		if(cod>=1632&&cod<=1641)
+		{
+			if(cod==1632)fixed+="0";
+			else if(cod==1633)fixed+="1";
+			else if(cod==1634)fixed+="2";
+			else if(cod==1635)fixed+="3";
+			else if(cod==1636)fixed+="4";
+			else if(cod==1637)fixed+="5";
+			else if(cod==1638)fixed+="6";
+			else if(cod==1639)fixed+="7";
+			else if(cod==1640)fixed+="8";
+			else if(cod==1641)fixed+="9";
+		}
+		else fixed+=number[i];
+	}
+	return fixed;
 }
 function isArabicDigit(chr) 
 {
