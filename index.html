@@ -23,7 +23,7 @@
 <!-- Top Navigation Menu -->
 <div id="topnav"class="topnav">
 	<a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
-	<img src="png/logo.png"width="120"height="75"><br>Bill: <b id="total">6</b> L.L.</a>
+	<img src="png/logo.png"width="120"height="75"><br>Bill: <b id="total">0</b> L.L.</a>
 	<div id="myCategories">
 	</div>
 </div>
@@ -49,20 +49,20 @@
 		<button data-close-button class="close-button">&times;</button>
 	</div>
 	<div style="float:right;"class="modal-body">
-		<h3 style="font-size:25px;">
-			<input id="name"type="text"name="name"onblur="checkGoodName(name);checkSubmit();"style="font-size:21px;width:60%;height:35px;">
+		<h3 style="font-size:1rem;">
+			<input id="name"type="text"name="name"onblur="checkGoodName(name);checkSubmit();"style="font-size:1rem;width:60%;height:35px;">
 			&nbsp;&nbsp;الإسم الكامل
 		</h3>
-		<h3 style="font-size:25px;">
+		<h3 style="font-size:1rem;">
 			<input id="phone1"type="text"name="phone1"onblur="checkGood1();checkSubmit();"onfocus="emptyPhone1()"onkeyup="checkPhone1();"
-			style="font-size:21px;width:20%;height:35px;">
+			style="font-size:1rem;width:20%;height:35px;">
 			&nbsp;/
 			<input id="phone2"type="text"name="phone2"onblur="checkGood2();checkSubmit();"onfocus="emptyPhone2();checkPhone();"onkeyup="checkPhone2();"
-			style="font-size:21px;width:50%;height:35px;">
+			style="font-size:1rem;width:40%;height:35px;">
 			&nbsp;&nbsp;رقم التلفون
 		</h3>
-		<h3 style="font-size:25px;">
-			<input id="address2"type="text"name="address2"style="font-size:21px;width:80%;height:35px;">
+		<h3 style="font-size:1rem;">
+			<input id="address2"type="text"name="address2"style="font-size:1rem;width:60%;height:35px;">
 			&nbsp;&nbsp;العنوان
 		</h3>
 		<button onclick="setValue();getValue();document.form2.submit();"id="button1"style="font-size:25px;position:relative;left:25%;">BUY-شراء</button>
