@@ -25,6 +25,11 @@ function getValue()
 	document.getElementById("message").value=txt+"alsaha315";
 	return txt;
 }
+function isArabicDigit(chr) 
+{
+	var arabic = /[\u0660-\u0669]/;
+	return(arabic.test(chr));
+}
 function disableButton()
 {
 	document.getElementById("button1").disabled = true;
@@ -103,7 +108,7 @@ function filterDigit(element,mark)
 	{
 		for (let i = 0; i < text.length; i++)
 		{
-			if(Number(text[i])||text[i]=="0")newText+=text[i];
+			if(Number(text[i])||text[i]=="0"||isArabicDigit(text[i]))newText+=text[i];
 		}
 		element.value=newText;
 		if(mark==2&&newText.length>6)element.value=newText.substring(0,6);
@@ -206,14 +211,14 @@ function distributeAll()
 				var p=document.createElement("p");
 				p.className="imagename";
 //				p.id="imagename";
-				p.style="font-size:21px;";
+				p.style="font-size:21px;white-space: nowrap;";
 				p.innerHTML=product.name;
 				div.append(p);
 				
 				p=document.createElement("p");
 				p.className="overlay";
 				p.id="overlay";
-				p.style="font-size:21px;";
+				p.style="font-size:21px;white-space: nowrap;";
 				p.innerHTML=numberComma(product.price)+" L.L.";
 				div.append(p);
 				
