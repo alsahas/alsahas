@@ -63,20 +63,20 @@ function checkPhone2()
 function checkGoodName(element)
 {
 	var p=document.getElementById(element);
-	if(p.value.length>0)p.style="border: 2px solid #00cc0c;font-size:21px;width:60%;height:35px;";
-	else p.style="border: 2px solid #ff1100;font-size:21px;width:60%;height:35px;";
+	if(p.value.length>0)p.style="border: 2px solid #00cc0c;font-size:1rem;width:60%;height:35px;";
+	else p.style="border: 2px solid #ff1100;font-size:1rem;width:60%;height:35px;";
 }
 function checkGood1()
 {
 	var p1=document.getElementById("phone1");
-	if(p1.value.length==2)p1.style="border: 2px solid #00cc0c;font-size:21px;width:20%;height:35px;";
-	else p1.style="border: 2px solid #ff1100;font-size:21px;width:20%;height:35px;";
+	if(p1.value.length==2)p1.style="border: 2px solid #00cc0c;font-size:1rem;width:20%;height:35px;";
+	else p1.style="border: 2px solid #ff1100;font-size:1rem;width:20%;height:35px;";
 }
 function checkGood2()
 {
 	var p2=document.getElementById("phone2");
-	if(p2.value.length==6)p2.style="border: 2px solid #00cc0c;font-size:21px;width:50%;height:35px;";
-	else p2.style="border: 2px solid #ff1100;font-size:21px;width:50%;height:35px;";
+	if(p2.value.length==6)p2.style="border: 2px solid #00cc0c;font-size:1rem;width:40%;height:35px;";
+	else p2.style="border: 2px solid #ff1100;font-size:1rem;width:40%;height:35px;";
 }
 function checkSubmit()
 {
@@ -155,7 +155,7 @@ function distribute(cat)
 			p=document.createElement("p");
 			p.className="overlay";
 			p.id="overlay";
-			p.style="font-size:0.8rem;";
+			p.style="font-size:0.9rem;";
 			p.innerHTML=numberComma(product.price)+" L.L.";
 			div.append(p);
 			
