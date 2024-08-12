@@ -58,32 +58,35 @@ function checkPhone1()
 function checkPhone2()
 {
 	var p2=document.getElementById("phone2");
+	var addr=document.getElementById("address2");
 	filterDigit(p2,2);
+	if(p2.value.length==6)addr.focus();
 }
 function checkGoodName(element)
 {
 	var p=document.getElementById(element);
-	if(p.value.length>0)p.style="border: 2px solid #00cc0c;font-size:1rem;width:60%;height:35px;";
-	else p.style="border: 2px solid #ff1100;font-size:1rem;width:60%;height:35px;";
+	if(p.value.length>0)p.style="border: 2px solid #00cc0c;border-radius:3px;font-size:1rem;width:60%;height:35px;";
+	else p.style="border: 2px solid #ff1100;border-radius:3px;font-size:1rem;width:60%;height:35px;";
 }
 function checkGood1()
 {
 	var p1=document.getElementById("phone1");
-	if(p1.value.length==2)p1.style="border: 2px solid #00cc0c;font-size:1rem;width:20%;height:35px;";
-	else p1.style="border: 2px solid #ff1100;font-size:1rem;width:20%;height:35px;";
+	if(p1.value.length==2)p1.style="border: 2px solid #00cc0c;border-radius:3px;font-size:1rem;width:20%;height:35px;";
+	else p1.style="border: 2px solid #ff1100;border-radius:3px;font-size:1rem;width:20%;height:35px;";
 }
 function checkGood2()
 {
 	var p2=document.getElementById("phone2");
-	if(p2.value.length==6)p2.style="border: 2px solid #00cc0c;font-size:1rem;width:40%;height:35px;";
-	else p2.style="border: 2px solid #ff1100;font-size:1rem;width:40%;height:35px;";
+	if(p2.value.length==6)p2.style="border: 2px solid #00cc0c;border-radius:3px;font-size:1rem;width:36.5%;height:35px;";
+	else p2.style="border: 2px solid #ff1100;border-radius:3px;font-size:1rem;width:36.5%;height:35px;";
 }
 function checkSubmit()
 {
 	var p1=document.getElementById("name");
 	var p2=document.getElementById("phone1");
 	var p3=document.getElementById("phone2");
-	if(p1.value.length>0&&p2.value.length==2&&p3.value.length==6)
+	var p4=document.getElementById("address2");
+	if(p1.value.length>0&&p2.value.length==2&&p3.value.length==6&&p4.value.length>0)
 	{
 		document.getElementById("button1").disabled = false;
 	}
