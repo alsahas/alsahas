@@ -2,14 +2,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Noto Naskh Arabic' rel='stylesheet'>
+
 <link rel="stylesheet" href="mystyle.css">
 <link rel="stylesheet" href="modelstyle.css">
-<link href='https://fonts.googleapis.com/css?family=Noto Naskh Arabic' rel='stylesheet'>
 <script type="text/javascript" src="myscript.js"></script> 
 <script defer src="modelscript.js"></script>
+
 </head>
 <body onload="distributeCategories();disableButton();">
 <!-- Simulate a smartphone / tablet look -->
+<!-- search -->
 <div id="search">
 	<img src="png/searchempty.png"width="300"height="45"style="position:relative;right:10px">
 	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
@@ -42,17 +45,27 @@
 </body>
 <div class="modal" id="modal">
 	<div class="modal-header">
-		<div style="float: right;"class="title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;تسجيل تفاصيل التوصيل</div>
+		<div style="position:absolute;right:40%;"class="title">تسجيل تفاصيل التوصيل</div>
 		<button data-close-button class="close-button">&times;</button>
 	</div>
 	<div style="float:right;"class="modal-body">
-		<h3 style="font-size:25px;"><input onblur="checkGoodName(name);checkSubmit();"style="font-size:21px;width:70%;height:35px;"id="name"type="text" name="name"value="">&nbsp;&nbsp;الإسم الكامل</h3>
-		<h3 style="font-size:25px;"><input onblur="checkGood1();checkSubmit();"onfocus="emptyPhone1()"onkeyup="checkPhone1();"style="font-size:21px;width:10%;height:35px;"id="phone1"type="text" name="phone1"value="">&nbsp;/
-									<input onblur="checkGood2();checkSubmit();"onfocus="emptyPhone2();checkPhone();"onkeyup="checkPhone2();"style="font-size:21px;width:40%;height:35px;"id="phone2"type="text" name="phone2"value="">&nbsp;&nbsp;رقم التلفون</h3>
-		<h3 style="font-size:25px;"><input style="font-size:21px;width:70%;height:35px;"id="address2"type="text" name="address2"value="">&nbsp;&nbsp;العنوان</h3>
-		<button onclick="setValue();getValue();document.form2.submit();"id="button1"style="font-size:25px;position:relative;left:30%;">BUY-شراء</button>
+		<h3 style="font-size:25px;">
+			<input id="name"type="text"name="name"onblur="checkGoodName(name);checkSubmit();"style="font-size:21px;width:80%;height:35px;">
+			&nbsp;&nbsp;الإسم الكامل
+		</h3>
+		<h3 style="font-size:25px;">
+			<input id="phone1"type="text"name="phone1"onblur="checkGood1();checkSubmit();"onfocus="emptyPhone1()"onkeyup="checkPhone1();"
+			style="font-size:21px;width:20%;height:35px;">
+			&nbsp;/
+			<input id="phone2"type="text"name="phone2"onblur="checkGood2();checkSubmit();"onfocus="emptyPhone2();checkPhone();"onkeyup="checkPhone2();"
+			style="font-size:21px;width:50%;height:35px;">
+			&nbsp;&nbsp;رقم التلفون
+		</h3>
+		<h3 style="font-size:25px;">
+			<input id="address2"type="text"name="address2"style="font-size:21px;width:80%;height:35px;">
+			&nbsp;&nbsp;العنوان
+		</h3>
+		<button onclick="setValue();getValue();document.form2.submit();"id="button1"style="font-size:25px;position:relative;left:25%;">BUY-شراء</button>
 	</div>
 </div>
 <div id="modeloverlay"></div>
