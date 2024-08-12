@@ -7,7 +7,7 @@ let mycart =
 function setValue()
 {
 	document.getElementById("customername").innerHTML=document.getElementById("name").value;
-	document.getElementById("phonenumber").innerHTML=fix(document.getElementById("phone1").value)+fix(document.getElementById("phone2").value);
+	document.getElementById("phonenumber").innerHTML=fix(document.getElementById("phone1").value)+"/"+fix(document.getElementById("phone2").value);
 	document.getElementById("address").innerHTML=document.getElementById("address2").value;
 }
 function getValue()
