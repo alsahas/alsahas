@@ -27,7 +27,7 @@ function getValue()
 }
 function isArabicDigit(chr) 
 {
-	//alert(chr.charCodeAt(0));		1632-1641	<=>	0 to 9 in arabic
+	//alert(chr.charCodeAt(0)+"hello");		1632-1641	<=>	0 to 9 in arabic
 	var arabic = /[\u0660-\u0669]/;
 	return(arabic.test(chr));
 }
