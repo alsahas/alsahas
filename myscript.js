@@ -63,7 +63,7 @@ function checkPhone2()
 function checkGoodName(element)
 {
 	var p=document.getElementById(element);
-	if(p.value.length>0)p.style="border: 2px solid #00cc0c;font-size:21px;width:80%;height:35px;";
+	if(p.value.length>0)p.style="border: 2px solid #00cc0c;font-size:21px;width:60%;height:35px;";
 	else p.style="border: 2px solid #ff1100;font-size:21px;width:80%;height:35px;";
 }
 function checkGood1()
