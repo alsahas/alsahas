@@ -27,6 +27,7 @@ function getValue()
 }
 function isArabicDigit(chr) 
 {
+	alert(chr.charCodeAt(0));
 	var arabic = /[\u0660-\u0669]/;
 	return(arabic.test(chr));
 }
@@ -108,7 +109,8 @@ function filterDigit(element,mark)
 	{
 		for (let i = 0; i < text.length; i++)
 		{
-			if(Number(text[i])||text[i]=="0"||isArabicDigit(text[i]))newText+=text[i];
+			if(isArabicDigit(text[i]))newText+=text[i];
+			else if(Number(text[i])||text[i]=="0")newText+=text[i];
 		}
 		element.value=newText;
 		if(mark==2&&newText.length>6)element.value=newText.substring(0,6);
