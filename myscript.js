@@ -164,35 +164,42 @@ function distribute(cat)
 		*/
 			var div= document.createElement("div");
 			div.className="container";
-			var a=document.createElement("a");
-			a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
-			if(product.pngExist)a.innerHTML="<img class='image' src='png/products/"+product.name+".png' width=100 height=100>";
-			else a.innerHTML="<img class='image' src='png/products/no-png.png' width=100 height=100>";
-			div.append(a);
 			
 			let vision="";
 			if(existInMyCart(product.name))vision="block";
 			else vision="none";
 			
-			a=document.createElement("a");
-			a.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
-			a.innerHTML="<img id='cart"+product.name+"' class='cart' style='display:"+vision+"'src='png/cart.png'>";
-			div.append(a);
-			
 			var p=document.createElement("p");
 			p.className="imagename";
-//			p.id="imagename";
 			p.style="font-size:21px;white-space: nowrap;";
 			p.innerHTML=product.name;
-			div.append(p);
 			
-			p=document.createElement("p");
-			p.className="overlay";
-			p.id="overlay";
-			p.style="font-size:21px;white-space: nowrap;";
-			p.innerHTML=numberComma(product.price)+" L.L.";
-			div.append(p);
+			var p2=document.createElement("p");
+			p2.className="overlay";
+			p2.id="overlay";
+			p2.style="font-size:21px;white-space: nowrap;";
+			p2.innerHTML=numberComma(product.price)+" L.L.";
 			
+			div.append(p);
+			page.append(div);
+			let w=p.clientWidth;
+			w-=100;
+			if(w>0)w=parseInt(w/2);
+			else w=0;
+			
+			var a=document.createElement("a");
+			a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
+			if(product.pngExist)a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/"+product.name+".png' width=100 height=100>";
+			else a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/no-png.png' width=100 height=100>";
+			
+			var a2=document.createElement("a");
+			a2.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
+			a2.innerHTML="<img id='cart"+product.name+"' class='cart' style='left:"+w+"px;display:"+vision+"'src='png/cart.png'>";
+			
+			div.append(a);
+			div.append(a2);
+			div.append(p);
+			div.append(p2);
 			page.append(div);
 		}
 	}
@@ -218,35 +225,42 @@ function distributeAll()
 				items++;
 				var div= document.createElement("div");
 				div.className="container";
-				var a=document.createElement("a");
-				a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
-				if(product.pngExist)a.innerHTML="<img class='image' src='png/products/"+product.name+".png' width=100 height=100>";
-				else a.innerHTML="<img class='image' src='png/products/no-png.png' width=100 height=100>";
-				div.append(a);
 				
 				let vision="";
 				if(existInMyCart(product.name))vision="block";
 				else vision="none";
 				
-				a=document.createElement("a");
-				a.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
-				a.innerHTML="<img id='cart"+product.name+"' class='cart' style='display:"+vision+"'src='png/cart.png' width=100 height=100>";
-				div.append(a);
-				
 				var p=document.createElement("p");
 				p.className="imagename";
-//				p.id="imagename";
 				p.style="font-size:21px;white-space: nowrap;";
 				p.innerHTML=product.name;
-				div.append(p);
 				
-				p=document.createElement("p");
-				p.className="overlay";
-				p.id="overlay";
-				p.style="font-size:21px;white-space: nowrap;";
-				p.innerHTML=numberComma(product.price)+" L.L.";
-				div.append(p);
+				var p2=document.createElement("p");
+				p2.className="overlay";
+				p2.id="overlay";
+				p2.style="font-size:21px;white-space: nowrap;";
+				p2.innerHTML=numberComma(product.price)+" L.L.";
 				
+				div.append(p);
+				page.append(div);
+				let w=p.clientWidth;
+				w-=100;
+				if(w>0)w=parseInt(w/2);
+				else w=0;
+				
+				var a=document.createElement("a");
+				a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
+				if(product.pngExist)a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/"+product.name+".png' width=100 height=100>";
+				else a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/no-png.png' width=100 height=100>";
+				
+				var a2=document.createElement("a");
+				a2.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
+				a2.innerHTML="<img id='cart"+product.name+"' class='cart' style='left:"+w+"px;display:"+vision+"'src='png/cart.png'>";
+				
+				div.append(a);
+				div.append(a2);
+				div.append(p);
+				div.append(p2);
 				page.append(div);
 			}
 			document.getElementById('numberitems').innerHTML="items found : "+items;
