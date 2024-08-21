@@ -141,6 +141,9 @@ function filterDigit(element,mark)
 }
 function distribute(cat)
 {
+	document.getElementById('inputsearch').value="";
+	document.getElementById('numberitems').innerHTML="";
+
 	var page=document.getElementById("page");
 	page.innerHTML="";
 	const topnav=document.querySelectorAll("#topnav a[href]");
@@ -189,8 +192,8 @@ function distribute(cat)
 			
 			var a=document.createElement("a");
 			a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
-			if(product.pngExist)a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/"+product.name+".png' width=100 height=100>";
-			else a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/no-png.png' width=100 height=100>";
+			if(product.pngExist)a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/"+product.id+".png' width=100 height=100>";
+			else a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/0.png' width=100 height=100>";
 			
 			var a2=document.createElement("a");
 			a2.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
@@ -250,8 +253,8 @@ function distributeAll()
 				
 				var a=document.createElement("a");
 				a.href="javascript:addProductToCart("+product.id+",'"+product.name+"',"+product.price+","+product.pngExist+");";
-				if(product.pngExist)a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/"+product.name+".png' width=100 height=100>";
-				else a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/no-png.png' width=100 height=100>";
+				if(product.pngExist)a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/"+product.id+".png' width=100 height=100>";
+				else a.innerHTML="<img style=position:relative;left:"+w+"px;class='image' src='png/products/0.png' width=100 height=100>";
 				
 				var a2=document.createElement("a");
 				a2.href="javascript:removeProductFromCart('"+product.name+"',"+product.price+");";
@@ -284,6 +287,8 @@ function distributeCategories()
 }
 function distributeMyCart()
 {
+	document.getElementById('inputsearch').value="";
+	document.getElementById('numberitems').innerHTML="";
 	var page=document.getElementById("page");
 	page.innerHTML="";
 	const sidebars=document.querySelectorAll("#topnav a[href]");
@@ -329,8 +334,8 @@ function distributeMyCart()
 			img.className="prod";
 			img.width="100";
 			img.height="100";
-			if(product.pngExist)img.src = "png/products/"+product.name+".png";
-			else img.src = "png/products/no-png.png";
+			if(product.pngExist)img.src = "png/products/"+product.id+".png";
+			else img.src = "png/products/0.png";
 			div.append(img);
 			
 			//<a href="javascript:plus('1');"><img class="plus" src="png/plus.png" width=20 height=20></a>
@@ -360,14 +365,14 @@ function distributeMyCart()
 			//<p id="imagename"class="imagename">name</p>
 			p=document.createElement("p");
 			p.className="imagename";
-			p.style="font-size:21px;";
+			p.style="font-size:21px;white-space: nowrap;";
 			p.innerHTML=product.name;
 			div.append(p);
 			
 			//<p id="product2"class="overlay">150,000,000 L.L.</p>
 			p=document.createElement("p");
 			p.id=product.name;
-			p.style="font-size:21px;";
+			p.style="font-size:21px;white-space: nowrap;";
 			p.className="overlay";
 			p.innerHTML=numberComma(product.price*product.quantity)+" L.L.";
 			div.append(p);
@@ -603,6 +608,7 @@ function numberComma(number)
 
 const categories=
 [
+{ name: 'أعشاب'},
 { name: 'أجبان'},
 { name: 'مواد غذائية'},
 { name: 'مشروبات'},
@@ -611,12 +617,16 @@ const categories=
 ];
 const products=
 [
+{ id: 1,name:'صلصة يمامة 660غ',category:'مواد غذائية',price:160200,pngExist:true},
+{ id: 3,name:'زهورات العطارةالكركديه',category:'أعشاب',price:67500,pngExist:true},
+{ id: 4,name:'زهورات العطارة خ ملينة',category:'أعشاب',price:67500,pngExist:true},
+{ id: 5,name:'زهورات العطارة موريجنا',category:'أعشاب',price:67500,pngExist:true},
+{ id: 6,name:'زهورات العطارة ز شامية',category:'أعشاب',price:67500,pngExist:true},
 { id: 11,name:'كاريوكا 400غرام',category:'مواد غذائية',price:476100,pngExist:true},
 { id: 25,name:'دومينغو 200 غرام',category:'مشروبات',price:180000,pngExist:true},
-{ id: 26,name:'دومينغو 400 غرام',category:'مشروبات',price:427500,pngExist:true},
+{ id: 26,name:'دومينغو 400غرام',category:'مشروبات',price:427500,pngExist:true},
 { id: 27,name:'زيت سيدي هشام 1 ليتر',category:'مواد غذائية',price:495000,pngExist:true},
 { id: 28,name:'زيت سيدي هشام 2 ليتر',category:'مواد غذائية',price:981000,pngExist:true},
-{ id: 31,name:'زيت الوزير 1.5ليتر',category:'مواد غذائية',price:756000,pngExist:true},
 { id: 32,name:'زيت الوزير 3ليتر',category:'مواد غذائية',price:1800000,pngExist:true},
 { id: 35,name:'اطلس محارم',category:'مواد أخرى',price:79200,pngExist:true},
 { id: 39,name:'سيف خشن',category:'منظفات',price:42300,pngExist:true},
@@ -633,6 +643,32 @@ const products=
 { id: 53,name:'قشقوان رونا300غرام',category:'أجبان',price:297900,pngExist:true},
 { id: 54,name:'ميونيز هوليدي صغير',category:'مواد غذائية',price:59400,pngExist:true},
 { id: 55,name:'coffee creamer400g',category:'مواد غذائية',price:108000,pngExist:true},
+{ id: 57,name:'اودكس',category:'منظفات',price:117000,pngExist:true},
+{ id: 59,name:'بريل600مل',category:'منظفات',price:85500,pngExist:true},
+{ id: 60,name:'دومتي 250غرام',category:'أجبان',price:58500,pngExist:true},
+{ id: 64,name:'رمبو',category:'منظفات',price:211500,pngExist:true},
+{ id: 67,name:'تونا deroniحر',category:'مواد غذائية',price:118800,pngExist:true},
+{ id: 68,name:'تون deroni ',category:'مواد غذائية',price:121500,pngExist:true},
+{ id: 70,name:'اودكس غالون4ك',category:'منظفات',price:315000,pngExist:true},
+{ id: 74,name:'اندومي 75غ',category:'مواد غذائية',price:25200,pngExist:true},
+{ id: 77,name:'اندومي كاري 75غ',category:'مواد غذائية',price:24300,pngExist:true},
+{ id: 80,name:'كتشب xtra 2.2;',category:'مواد غذائية',price:297000,pngExist:true},
+{ id: 83,name:'برايفت9',category:'مواد أخرى',price:81000,pngExist:true},
+{ id: 84,name:'بريفت 8',category:'مواد أخرى',price:58500,pngExist:true},
+{ id: 86,name:'مماسح ارض',category:'منظفات',price:45000,pngExist:true},
+{ id: 87,name:'ليف استحمام',category:'منظفات',price:85500,pngExist:true},
+{ id: 88,name:'معكرونة reggia',category:'مواد غذائية',price:43200,pngExist:true},
+{ id: 91,name:'حمص مطحون',category:'مواد غذائية',price:58500,pngExist:true},
+{ id: 92,name:'بازيلا شتورا صغير',category:'مواد غذائية',price:54000,pngExist:true},
+{ id: 93,name:'ملح pearl',category:'مواد غذائية',price:18000,pngExist:true},
+{ id: 94,name:'بازيلا شتورا850 غرام ',category:'مواد غذائية',price:99000,pngExist:true},
+{ id: 95,name:'فول شتورا850',category:'مواد غذائية',price:108000,pngExist:true},
+{ id: 96,name:'فول شتورا 400غرام',category:'مواد غذائية',price:49500,pngExist:true},
+{ id: 97,name:'فول مع حمص شتورا 400 غرام',category:'مواد غذائية',price:55800,pngExist:true},
+{ id: 98,name:'حمص حب شتورا',category:'مواد غذائية',price:59400,pngExist:true},
+{ id: 99,name:'فول مع حمص شتورا 600 غرام',category:'مواد غذائية',price:72000,pngExist:true},
+{ id: 100,name:'فول شتورا 600غرام',category:'مواد غذائية',price:67500,pngExist:true},
 { id: 152,name:'زيت bell food-5 ليتر',category:'مواد غذائية',price:589500,pngExist:true},
-{ id: 161,name:'جبنة قشقوان-رونا 600 غرام',category:'أجبان',price:522000,pngExist:true}
+{ id: 161,name:'جبنة قشقوان-رونا 600 غرام',category:'أجبان',price:522000,pngExist:true},
+{ id: 342,name:'زيت الوزير 0.5ل',category:'مواد غذائية',price:387000,pngExist:true}
 ];
