@@ -431,9 +431,9 @@ function quantity(prodname)
 	{
 		if(Number(quantity)>0)
 		{
-			updateMyCartQuantity(prodname.substring(8,prodname.length),quantity);
-			document.getElementById(prodname).innerHTML ="&nbsp&nbsp"+quantity+"&nbsp&nbsp";
-			document.getElementById(prodname.substring(8,prodname.length)).innerHTML =numberComma(getPriceMyCart(prodname.substring(8,prodname.length))*quantity)+" L.L.";
+			updateMyCartQuantity(prodname.substring(8,prodname.length),parseInt(quantity));
+			document.getElementById(prodname).innerHTML ="&nbsp&nbsp"+parseInt(quantity)+"&nbsp&nbsp";
+			document.getElementById(prodname.substring(8,prodname.length)).innerHTML =numberComma(getPriceMyCart(prodname.substring(8,prodname.length))*parseInt(quantity))+" L.L.";
 		}	
 		else alert("You Must Enter Number Greater Than Zero !!!");
 	}
@@ -605,6 +605,7 @@ function numberComma(number)
 	}
 	return result;
 }
+
 const categories=
 [
 { name: 'أعشاب'},
