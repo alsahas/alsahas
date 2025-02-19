@@ -48,6 +48,22 @@ function fix(number)
 	}
 	return fixed;
 }
+function navigateLeft()
+{
+	var nav = document.getElementById("topnav");
+	var button = document.getElementById("button");
+
+	if (nav.style.display === "none") 
+	{
+		nav.style.display = "block";
+		button.innerHTML="إخفاء اللائحة";
+	} 
+	else 
+	{
+		nav.style.display = "none";
+		button.innerHTML="إظهار اللائحة";
+	}
+}
 function isArabicDigit(chr) 
 {
 	//alert(chr.charCodeAt(0)+"hello");		1632-1641	<=>	0 to 9 in arabic
@@ -605,7 +621,6 @@ function numberComma(number)
 	}
 	return result;
 }
-
 const categories=
 [
 { name: 'أعشاب'},
