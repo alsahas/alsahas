@@ -289,7 +289,11 @@ function distributeAll()
 }
 function distributeCategories()
 {
-	if((document.documentElement.clientWidth/document.documentElement.clientHeight)<0.62)screen.orientation.lock('landscape').catch((e) => alert(e));
+	if((document.documentElement.clientWidth/document.documentElement.clientHeight)<0.62)
+	{
+		document.documentElement.requestFullscreen();
+		screen.orientation.lock('landscape').catch((e) => alert(e));
+	}
 	alert(document.documentElement.clientWidth/document.documentElement.clientHeight);
 	var topnav=document.getElementById("myCategories");
 	for (let i = 0; i < categories.length; i++)
