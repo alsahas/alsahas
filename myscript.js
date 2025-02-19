@@ -50,9 +50,7 @@ function fix(number)
 }
 function navigateLeft()
 {
-	alert(document.documentElement.clientWidth);
-	alert(document.documentElement.clientHeight);
-	/*var nav = document.getElementById("topnav");
+	var nav = document.getElementById("topnav");
 	var button = document.getElementById("button");
 
 	if (nav.style.display === "none") 
@@ -64,7 +62,7 @@ function navigateLeft()
 	{
 		nav.style.display = "none";
 		button.innerHTML="إظهار اللائحة";
-	}*/
+	}
 }
 
 function isArabicDigit(chr) 
