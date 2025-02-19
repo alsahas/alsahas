@@ -64,7 +64,6 @@ function navigateLeft()
 		button.innerHTML="إظهار اللائحة";
 	}
 }
-
 function isArabicDigit(chr) 
 {
 	//alert(chr.charCodeAt(0)+"hello");		1632-1641	<=>	0 to 9 in arabic
@@ -290,6 +289,7 @@ function distributeAll()
 }
 function distributeCategories()
 {
+	if((document.documentElement.clientWidth/document.documentElement.clientHeight)<0.62)screen.orientation.lock('landscape').catch((e) => alert(e));
 	var topnav=document.getElementById("myCategories");
 	for (let i = 0; i < categories.length; i++)
 	{
