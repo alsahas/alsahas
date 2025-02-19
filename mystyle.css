@@ -2,7 +2,7 @@
 {
 	body 
 	{
-		font-family:Noto Naskh Arabic;
+		font-family:https://fonts.googleapis.com/css?family=Noto Naskh Arabic;
 		background-image: url('png/background.png');
 		background-repeat:  repeat;
 		background-attachment:fixed;
@@ -126,7 +126,7 @@ a:link
 {
   overflow: hidden;
   background-color: #333;
-  position: relative;
+  width:100%;
 }
 
 .topnav a 
