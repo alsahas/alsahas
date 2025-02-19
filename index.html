@@ -15,7 +15,7 @@
 
 <div id="main"class="mobile-container">
 <!-- Top Navigation Menu -->
-<div id="topnav"class="topnav"style="position: fixed;">
+<div id="topnav"class="topnav"style="position: fixed;z-index:2">
 	<!-- search -->
 	<img src="png/searchempty.png"width="500px"height="70px"style="position:relative;right:10px">
 	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
@@ -23,13 +23,13 @@
 	<label id="numberitems"style="font-size:40px;color:white;"></label>
 	<div>
 		<a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
-		<img src="png/logo.png"width="100"height="60"><br>Bill: <b id="total">10000000</b> L.L.</a>
+		<img src="png/logo.png"width="100"height="60"><br>Bill: <b id="total">0</b> L.L.</a>
 	</div>
 	<div id="myCategories">
 	</div>
 </div>
 
-<div id="page" class="page"style="position:absolute;top:230px;left:19px;z-index:-1">
+<div id="page" class="page"style="position:absolute;top:230px;left:19px;z-index:1">
 
 </div>	
 <p style="display:none;"></p>
