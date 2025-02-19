@@ -50,7 +50,8 @@ function fix(number)
 }
 function navigateLeft()
 {
-	var nav = document.getElementById("topnav");
+	alert(document.documentElement.clientWidth);
+	/*var nav = document.getElementById("topnav");
 	var button = document.getElementById("button");
 
 	if (nav.style.display === "none") 
@@ -62,8 +63,9 @@ function navigateLeft()
 	{
 		nav.style.display = "none";
 		button.innerHTML="إظهار اللائحة";
-	}
+	}*/
 }
+
 function isArabicDigit(chr) 
 {
 	//alert(chr.charCodeAt(0)+"hello");		1632-1641	<=>	0 to 9 in arabic
