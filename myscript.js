@@ -50,7 +50,8 @@ function fix(number)
 }
 function navigateLeft()
 {
-	alert(document.documentElement.clientWidth);
+	alert(document.documentElement.clientWidth+"---"+document.documentElement.clientHeight);
+
 	/*var nav = document.getElementById("topnav");
 	var button = document.getElementById("button");
 
