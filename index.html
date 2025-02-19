@@ -13,9 +13,10 @@
 <body onload="distributeCategories();disableButton();">
 <!-- Simulate a smartphone / tablet look -->
 
+<button id="button"onclick="navigateLeft()" style="position:fixed;right:10px;top:10px;z-index:3">Ǝއ`ȡ∆Ή</button>
 <div id="main"class="mobile-container">
 <!-- Top Navigation Menu -->
-<div id="topnav"class="topnav"style="position: fixed;z-index:2">
+<div id="topnav"class="topnav"style="position:fixed;z-index:2">
 	<!-- search -->
 	<img src="png/searchempty.png"width="500px"height="70px"style="position:relative;right:10px">
 	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
@@ -27,6 +28,7 @@
 	</div>
 	<div id="myCategories">
 	</div>
+		<img data-modal-target="#modal"id="form"type="submit"style="display:none;" src="png/deliver.png"width="100px"height="60px">
 </div>
 
 <div id="page" class="page"style="position:absolute;top:230px;left:19px;z-index:1">
@@ -40,7 +42,6 @@
 	<input type="subject"id="subject" name="subject"value=""style="display:none;">
     <textarea id="message" name="message"value=""style="display:none;"></textarea>
 </form>	
-<img data-modal-target="#modal"id="form"type="submit"style="display:none;" src="png/deliver.png">
 <p id="customername"style="display:none;"></p>
 <p id="phonenumber"style="display:none;"></p>
 <p id="address"style="display:none;"></p>
