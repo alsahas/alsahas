@@ -9,12 +9,12 @@ function checkMaintenance()
 	{
 		nav.style.display = "none";
 		button.style.display = "none";
+		fix.style.display = "block";
 	}
 	else
 	{
 		distributeCategories();
 		disableButton();
-		fix.style.display = "none";
 	}
 }
 let mycart =
