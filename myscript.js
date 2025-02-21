@@ -324,8 +324,6 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
-	var height=document.getElementById("topnav").offsetHeight;
-	document.getElementById("page").style="position:absolute;top:"+(height+60)+"px;left:19px;z-index:1";
 }
 function distributeMyCart()
 {
@@ -561,6 +559,8 @@ function addProductToCart(idd,nom,pr,exist)
 		document.getElementById("cart"+nom).style.display = "block";
 	}
 	updateTotal();
+	var height=document.getElementById("topnav").offsetHeight;
+	document.getElementById("page").style="position:absolute;top:"+(height+60)+"px;left:19px;z-index:1";
 }
 function removeProductFromCart(nom,pr)
 {
@@ -576,6 +576,8 @@ function removeProductFromCart(nom,pr)
 	mycart = dict.slice();
 	document.getElementById("cart"+nom).style.display = "none";
 	updateTotal();
+	var height=document.getElementById("topnav").offsetHeight;
+	document.getElementById("page").style="position:absolute;top:"+(height+60)+"px;left:19px;z-index:1";
 }
 function updateTotal()
 {
