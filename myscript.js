@@ -324,6 +324,8 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
+	var height=document.getElementById("topnav").offsetHeight;
+	document.getElementById("page").style="position:absolute;top:"+(height+60)+"px;left:19px;z-index:1";
 }
 function distributeMyCart()
 {
