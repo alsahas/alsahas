@@ -324,6 +324,7 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
+	calibratePageHeight();
 }
 function distributeMyCart()
 {
@@ -560,7 +561,11 @@ function addProductToCart(idd,nom,pr,exist)
 	}
 	updateTotal();
 	var height=document.getElementById("topnav").offsetHeight;
-	document.getElementById("page").style="position:absolute;top:"+(height+60)+"px;left:19px;z-index:1";
+	calibratePageHeight();
+}
+function calibratePageHeight()
+{
+	document.getElementById("page").style="position:absolute;top:"+(height+80)+"px;left:19px;z-index:1";
 }
 function removeProductFromCart(nom,pr)
 {
@@ -577,7 +582,7 @@ function removeProductFromCart(nom,pr)
 	document.getElementById("cart"+nom).style.display = "none";
 	updateTotal();
 	var height=document.getElementById("topnav").offsetHeight;
-	document.getElementById("page").style="position:absolute;top:"+(height+60)+"px;left:19px;z-index:1";
+	calibratePageHeight();
 }
 function updateTotal()
 {
@@ -588,6 +593,8 @@ function updateTotal()
 	}
 	var b=document.getElementById("total");
 	b.innerHTML=""+numberComma(total);
+	var b2=document.getElementById("total2");
+	b2.innerHTML=""+numberComma(total+50000);
 	if(mycart.length==0)
 	{
 		var f=document.getElementById("form");
@@ -649,6 +656,7 @@ function numberComma(number)
 	}
 	return result;
 }
+
 
 const categories=
 [
