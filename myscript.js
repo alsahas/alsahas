@@ -605,7 +605,7 @@ function updateTotal()
 	var b=document.getElementById("total");
 	b.innerHTML=""+numberComma(total);
 	var b2=document.getElementById("total2");
-	b2.innerHTML=""+numberComma(total+50000);
+	b2.innerHTML="= "+numberComma(total+50000);
 	if(mycart.length==0)
 	{
 		var f=document.getElementById("form");
