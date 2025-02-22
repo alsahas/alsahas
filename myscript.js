@@ -17,6 +17,14 @@ function checkMaintenance()
 		disableButton();
 	}
 }
+function test()
+{
+	var allElem = document.getElementsByTagName('telephoneButton');
+	for (var i=0, max=allElem.length; i < max; i++) 
+	{
+	  alert(allElem[i].p.innerHTML);
+	}
+}
 let mycart =
 [
 /*  { name: 'product7',quantity:1, price: 40000 },
@@ -425,12 +433,18 @@ function distributeMyCart()
 }
 function plus(name)
 {
+	var q;
 	for (let i = 0; i < mycart.length; i++) 
 	{
 		const product = mycart[i];
-		if(product.name==name)mycart[i].quantity++;
+		if(product.name==name)
+		{
+			mycart[i].quantity++;
+			q=document.getElementById("quantity"+name);
+			q.innerHTML="&nbsp&nbsp"+mycart[i].quantity+"&nbsp&nbsp";
+		}
 	}
-	distributeMyCart();
+	//distributeMyCart();
 	updateTotal();
 }
 function minus(name)
@@ -440,10 +454,15 @@ function minus(name)
 		const product = mycart[i];
 		if(product.name==name)
 		{
-			if(product.quantity>1)mycart[i].quantity--;
+			if(product.quantity>1)
+			{
+				mycart[i].quantity--;
+				q=document.getElementById("quantity"+name);
+				q.innerHTML="&nbsp&nbsp"+mycart[i].quantity+"&nbsp&nbsp";
+			}	
 		}
 	}
-	distributeMyCart();
+	//distributeMyCart();
 	updateTotal();
 }
 function remove(name)
