@@ -324,7 +324,6 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
-	calibratePageHeight();
 }
 function distributeMyCart()
 {
@@ -561,12 +560,6 @@ function addProductToCart(idd,nom,pr,exist)
 		document.getElementById("cart"+nom).style.display = "block";
 	}
 	updateTotal();
-	calibratePageHeight();
-}
-function calibratePageHeight()
-{
-	var height=document.getElementById("topnav").offsetHeight;
-	document.getElementById("page").style="position:absolute;top:"+(height+80)+"px;left:19px;z-index:1";
 }
 function removeProductFromCart(nom,pr)
 {
@@ -582,7 +575,6 @@ function removeProductFromCart(nom,pr)
 	mycart = dict.slice();
 	document.getElementById("cart"+nom).style.display = "none";
 	updateTotal();
-	calibratePageHeight();
 }
 function updateTotal()
 {
