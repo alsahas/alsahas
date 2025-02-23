@@ -1,4 +1,4 @@
-var maintenance=false;
+var maintenance=true;
 function checkMaintenance()
 {
 	var nav = document.getElementById("topnav");
