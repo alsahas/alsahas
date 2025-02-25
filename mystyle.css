@@ -1,18 +1,4 @@
-@media screen and ((width/height)<0.62 )
-{
-	html 
-	{
-		transform: rotate(-90deg);
-		transform-origin: left top;
-		width: 100vh;
-		height: 100vw;
-		overflow-x: hidden;
-		position: absolute;
-		top: 100%;
-		left: 0;
-	}
-}
-@media screen and (min-width: 480px) 
+@media screen and (min-width: 240px) 
 {
 	body 
 	{
