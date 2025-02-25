@@ -333,7 +333,7 @@ function distributeCategories()
 		topnav.append(a);
 	}
 	var pag=document.getElementById("page");
-	pag.style.top="600px";
+	pag.style="position:absolute;top:310px;left:19px;z-index:1";
 }
 function distributeMyCart()
 {
