@@ -332,6 +332,8 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
+	var pag=document.getElementById("page");
+	pag.style.top="390";
 }
 function distributeMyCart()
 {
