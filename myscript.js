@@ -22,6 +22,10 @@ let mycart =
 /*  { name: 'product7',quantity:1, price: 40000 },
   { name: 'product8',quantity:2, price: 45000 }*/
 ];
+function calibratePage()
+{
+	document.getElementById("page").style.top=(document.getElementById("topnav").offsetHeight)+30+"px";
+}
 function setValue()
 {
 	document.getElementById("customername").innerHTML=document.getElementById("name").value;
@@ -241,6 +245,7 @@ function distribute(cat)
 			page.append(div);
 		}
 	}
+	calibratePage();
 }
 function distributeAll()
 {
@@ -305,6 +310,7 @@ function distributeAll()
 
 		}
 	}
+	calibratePage();
 }
 function distributeCategories()
 {
@@ -324,7 +330,7 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
-	document.getElementById("page").style.top=(document.getElementById("topnav").offsetHeight)+30+"px";
+	calibratePage();
 }
 function distributeMyCart()
 {
@@ -423,6 +429,7 @@ function distributeMyCart()
 		updateTotal;
 		window.scrollTo(0, 0);
 	}
+	calibratePage();
 }
 function plus(name)
 {
@@ -596,9 +603,9 @@ function updateTotal()
 		total+=mycart[i].price*mycart[i].quantity;
 	}
 	var b=document.getElementById("total");
-	b.innerHTML=""+numberComma(total);
+	b.innerHTML=" Bill: "+numberComma(total)+" L.L.";
 	var b2=document.getElementById("total2");
-	b2.innerHTML="= "+numberComma(total+50000);
+	b2.innerHTML="= "+numberComma(total+50000)+" L.L.";
 	if(mycart.length==0)
 	{
 		var f=document.getElementById("form");
@@ -660,6 +667,7 @@ function numberComma(number)
 	}
 	return result;
 }
+
 const categories=
 [
 { name: 'حبوب'},
