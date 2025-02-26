@@ -332,8 +332,6 @@ function distributeCategories()
 		a.innerHTML=category.name;
 		topnav.append(a);
 	}
-	var pag=document.getElementById("page");
-	pag.style="position:absolute;top:310px;left:19px;z-index:1";
 }
 function distributeMyCart()
 {
@@ -611,12 +609,12 @@ function updateTotal()
 	if(mycart.length==0)
 	{
 		var f=document.getElementById("form");
-		f.style="display:none;";
+		f.style.display="none";
 	}
 	else 
 	{
 		var f=document.getElementById("form");
-		f.style="display:block;";
+		f.style.display="block";
 	}
 	return total;
 }
