@@ -3,6 +3,7 @@
 	body 
 	{
 		font-family:Sakkal Majalla;
+		font-size: 3.2vw;
 		background-image: url('png/background.png');
 		background-repeat:  repeat;
 		background-attachment:fixed;
