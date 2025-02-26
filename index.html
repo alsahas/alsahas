@@ -20,26 +20,26 @@
 <button id="button"onclick="navigateLeft()" style="position:fixed;right:1vw;top:3vw;z-index:3">إخفاء اللائحة</button>
 <div id="main"class="mobile-container">
 <!-- Top Navigation Menu -->
-<div id="topnav"class="topnav"style="position:fixed;height:18vw;z-index:2">
+<div id="topnav"class="topnav"style="position:fixed;height:22vw;z-index:2">
 	<!-- search -->
-	<p style="font-size:1.2vw;color:white;position:absolute;left:1vw;">SEARCH</p>
+	<label style="font-size:1.2vw;color:white;position:absolute;top:2vw;left:0.5vw;">SEARCH</label>
 	<input id="inputsearch" type="text" onkeyup="distributeAll()"
-	style="position:absolute;width:10vw;height:2vw;top:1vw;left:5vw;">
-	<label id="numberitems"style="position:absolute;top:0.6vw;left:16vw;font-size:2vw;color:white;">items found:</label>
+	style="position:absolute;width:20vw;height:4vw;top:1vw;left:5vw;">
+	<label id="numberitems"style="font-size:1.2vw;color:white;position:absolute;top:2vw;left:27vw;">Items Found:</label>
 	
-	<div style="position:relative;top:3.5vw">
+	<div style="position:relative;top:7vw">
 		<a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
 			<img src="png/logo.png"width="130vw"height="75vw"><br>Bill: <b style="color:white;font-size:1.2vw;font-weight:bold"id="total">0</b> L.L.<br>
 			<span style="color:red;font-size:1.5vw;font-weight:bold">+50,000 Delivery</span>
 			<br><span style="color:green;font-size:2.4vw;font-weight:bold"><b id="total2"> = 50,000</b> L.L.
 		</a>
 	</div>
-	<div id="myCategories"style="font-size:1.2vw;color:white;position:absolute;top:4vw;left:13vw;">
+	<div id="myCategories"style="font-size:1.2vw;color:white;position:absolute;top:7vw;left:20vw;">
 	</div>
-		<img style="position:fixed;left:30vw;display:none;"data-modal-target="#modal"id="form"type="submit"src="png/deliver.png"width="100px"height="60px">
+		<img style="position:fixed;left:40vw;display:block;"data-modal-target="#modal"id="form"type="submit"src="png/deliver.png"width="80px"height="40px">
 </div>
 
-<div id="page" class="page"style="position:absolute;top:22vw;left:1vw;z-index:1">
+<div id="page" class="page"style="position:absolute;top:25vw;left:1vw;z-index:1">
 
 </div>	
 <p style="display:none;"></p>
