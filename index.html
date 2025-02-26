@@ -13,30 +13,33 @@
 <body onload="checkMaintenance();">
 <!-- Simulate a smartphone / tablet look -->
 <div id="maintenance"style="display:none;">
-	<h1 style="color:red">SORRY !!! ALSAHA SHOP Website is Currently Down for Maintenance... Visit Us later</h1>
+	<h1 style="color:red">SORRY !!! ALSAHA SHOP ًWebsite is Currently Down for Maintenance... Visit Us later</h1>
 	<h1 style="color:red">عذرا" موقع دكانة الساحة تحت أعمال الصيانة... نرجو زيارتنا لاحقا" </h1>
 </div>
-<button id="button"onclick="navigateLeft()" style="position:fixed;right:10px;top:10px;z-index:3">إخفاء اللائحة</button>
-<button id="button"onclick="window.open('alsaha_app.apk')" style="position:fixed;right:10px;top:50px;z-index:3">Install ALSAHA Application</button>
+<button onclick="window.open('alsaha_app.apk')" style="position:fixed;right:1vw;top:1vw;z-index:3">Install ALSAHA Application</button>
+<button id="button"onclick="navigateLeft()" style="position:fixed;right:1vw;top:3vw;z-index:3">إخفاء اللائحة</button>
 <div id="main"class="mobile-container">
 <!-- Top Navigation Menu -->
-<div id="topnav"class="topnav"style="position:fixed;z-index:2">
+<div id="topnav"class="topnav"style="position:fixed;height:18vw;z-index:2">
 	<!-- search -->
-	<img src="png/searchempty.png"width="500px"height="70px"style="position:relative;right:10px">
-	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
-	style="font-family:Noto Naskh Arabic;font-size:25px;position:absolute;width:405px;height:45px;top:12px;left:7px;">
-	<label id="numberitems"style="font-size:40px;color:white;"></label>
-	<div>
+	<p style="font-size:1.2vw;color:white;position:absolute;left:1vw;">SEARCH</p>
+	<input id="inputsearch" type="text" onkeyup="distributeAll()"
+	style="position:absolute;width:10vw;height:2vw;top:1vw;left:5vw;">
+	<label id="numberitems"style="position:absolute;top:0.6vw;left:16vw;font-size:2vw;color:white;">items found:</label>
+	
+	<div style="position:relative;top:3.5vw">
 		<a id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
-		<img src="png/logo.png"width="100"height="60"><br>Bill: <b id="total">0</b> L.L.<br><span style="color:red;font-size:20px;font-weight:bold">+50,000 Delivery</span>
-		<br><span style="color:green;font-size:30px;font-weight:bold"><b id="total2"> = 50,000</b> L.L.</a>
+			<img src="png/logo.png"width="130vw"height="75vw"><br>Bill: <b style="color:white;font-size:1.2vw;font-weight:bold"id="total">0</b> L.L.<br>
+			<span style="color:red;font-size:1.5vw;font-weight:bold">+50,000 Delivery</span>
+			<br><span style="color:green;font-size:2.4vw;font-weight:bold"><b id="total2"> = 50,000</b> L.L.
+		</a>
 	</div>
-	<div id="myCategories">
+	<div id="myCategories"style="font-size:1.2vw;color:white;position:absolute;top:4vw;left:13vw;">
 	</div>
-		<img data-modal-target="#modal"id="form"type="submit"style="display:none;" src="png/deliver.png"width="100px"height="60px">
+		<img style="position:fixed;left:30vw;display:none;"data-modal-target="#modal"id="form"type="submit"src="png/deliver.png"width="100px"height="60px">
 </div>
 
-<div id="page" class="page"style="position:absolute;top:350px;left:19px;z-index:1">
+<div id="page" class="page"style="position:absolute;top:22vw;left:1vw;z-index:1">
 
 </div>	
 <p style="display:none;"></p>
