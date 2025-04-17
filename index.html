@@ -13,8 +13,8 @@
 <body onload="checkMaintenance();">
 <!-- Simulate a smartphone / tablet look -->
 <div id="maintenance"style="display:none;">
-	<h1 style="color:red">SORRY !!! ALSAHA SHOP Website is Currently Down for Maintenance... Visit Us later</h1>
-	<h1 style="color:red">عذرا" موقع دكانة الساحة تحت أعمال الصيانة... نرجو زيارتنا لاحقا" </h1>
+	<h1 style="color:red">SORRY !!! ALSAHA&nbsp;SHOP ًWebsite is Currently Closed... Visit Us Later</h1>
+	<h1 style="color:red">عذرا" موقع دكانة الساحة مغلق حاليا"... نرجو زيارتنا لاحقا" </h1>
 </div>
 <button onclick="window.open('alsaha_app.apk')" style="color:green;font-size:10px;position:fixed;left:220px;top:1px;z-index:3">Install ALSAHA Application For Android Phones</button>
 <button onclick="window.open('alsaha_app.ipa')" style="color:green;font-size:10px;position:fixed;left:1px;top:1px;z-index:3">Install ALSAHA Application For Apple Phones</button>
@@ -27,13 +27,14 @@
 	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
 	style="font-family:Sakkal Majalla;font-size:25px;position:absolute;width:283px;height:32px;top:19px;left:3px;">
 	<label id="numberitems"style="font-size:40px;color:white;"></label>
-	<img onmouseover="changeImage2()"onmouseout="changeImage1()"data-modal-target="#modal"class="form"id="form"type="submit"style="position:absolute;width:7vw;height:5vw;top:55;left:170px;display:none;" src="png/deliver.png"width="100px"height="60px">
+	<img onmouseover="changeImage2()"onmouseout="changeImage1()"data-modal-target="#modal"class="form"id="form"type="submit"
+	style="position:absolute;width:5vw;height:3vw;top:55;left:170px;display:none;" src="png/deliver.png">
 	<div>
-		<a style="height:20%;"id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
+		<a style="height:15%;"id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
 			<img src="png/logo.png"style="width:8vw;"><br> 
-			<span style="line-height:50%;color:white;font-size:2.5vw;font-weight:bold"id="total">Bill: 0 L.L.</span><br>
-			<span style="line-height:50%;color:red;font-size:2.5vw;font-weight:bold">+50,000 Delivery</span><br style="marin:1px;">
-			<span style="line-height:50%;color:green;font-size:4vw;font-weight:bold"><b id="total2"> = 50,000 L.L.</b>
+			<span style="line-height:70%;color:white;font-size:1.5vw;font-weight:bold"id="total">Bill: 0 L.L.</span><br>
+			<span style="line-height:70%;color:red;font-size:1.5vw;font-weight:bold">+50,000 Delivery</span><br style="marin:1px;">
+			<span style="line-height:70%;color:green;font-size:2.5vw;font-weight:bold"><b id="total2"> = 50,000 L.L.</b>
 		</a>
 	</div>
 	<div id="myCategories">
