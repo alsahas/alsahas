@@ -16,6 +16,35 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebas
 	const db=getDatabase();
 	const dbref=ref(db);
 	
+	const reqRef = ref(db, "requests");
+
+	onValue(reqRef, (snapshot) => 
+	{
+	    if (snapshot.exists()) 
+		{
+			if (snapshot.exists()) 
+			{
+				const data = snapshot.val();
+				const keys = Object.keys(data);
+				var found=false;
+				let i = 0;
+				while (i < keys.length&&!found) 
+				{
+					const key = keys[i];
+					const item = data[key];
+					if(item.driver==drivername.innerHTML)
+					{
+						found=true;
+						loadRequests();
+					}
+					i++;
+				}
+			} else {
+				console.log("No data available");
+			}
+	    }
+	});
+	
 async function updateRequestState(requestid,newState) 
 {
 	const targetPath = "requests/"+requestid;
@@ -34,7 +63,18 @@ async function updateRequestState(requestid,newState)
 		console.error("Error updating state: ", error);
 	}
 }
-
+function stripHtml(htmlString) 
+{
+    // 1. Create a temporary div element in memory
+    const tempDiv = document.createElement('div');
+    
+    // 2. Set the input HTML string as the innerHTML of the div
+    tempDiv.innerHTML = htmlString;
+    
+    // 3. Return the text content, which ignores the tags
+    // textContent is generally preferred over innerText as it's more standard
+    return tempDiv.textContent || tempDiv.innerText || "";
+}
 function getNow()
 {
 	const today = new Date();
@@ -77,16 +117,18 @@ function loadRequests()
 				{
 					const key = keys[i];
 					const item = data[key];
-					if(item.driver==drivername)
+					if(item.driver==drivername&&item.state<3)
 					{
-						inner+="<li><a href=\"\"id=\""+key+"\"class=\"categoryli\">طلبية رقم:"+key+"&nbsp;بإسم:"+item.fullname+"</a></li>";		
+						if(item.state==0)inner+="<li class=\"category0\"><a href=\"\"id=\""+key+"\">طلبية رقم:"+key+"&nbsp;بإسم:"+item.fullname+"</a></li>";		
+						else if(item.state==1)inner+="<li class=\"category1\"><a href=\"\"id=\""+key+"\">طلبية رقم:"+key+"&nbsp;بإسم:"+item.fullname+"</a></li>";		
+						else if(item.state==2)inner+="<li class=\"category2\"><a href=\"\"id=\""+key+"\">طلبية رقم:"+key+"&nbsp;بإسم:"+item.fullname+"</a></li>";		
 						found=true;
 					}
 					i++;
 				}
 				if(found)
 				{
-					request_section.innerHTML="<ul id='category'class='category'>"+inner+"</ul>";
+					request_section.innerHTML="<ul id='category'>"+inner+"</ul>";
 					//topnav.add(request_section);
 				}
 				else
