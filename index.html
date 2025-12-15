@@ -1,84 +1,72 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <link href='https://fonts.googleapis.com/css?family=Noto Naskh Arabic' rel='stylesheet'>
 
-<link rel="stylesheet" href="mystyle.css">
+<link rel="stylesheet" href="card-style.css">
 <link rel="stylesheet" href="modelstyle.css">
-<script type="text/javascript" src="myscript.js"></script> 
+<link rel="stylesheet" href="mystyle.css">
+<script type="text/javascript"src="myscript.js"></script> 
 <script defer src="modelscript.js"></script>
+<script type="module" src="database.js"></script> 
 
 </head>
-<body onload="checkMaintenance();">
+<body id="body"onload="loadDictionary();">
+
 <!-- Simulate a smartphone / tablet look -->
-<div id="maintenance"style="display:none;">
-	<h1 style="background-color:DodgerBlue;">عذرا" موقع دكانة الساحة مغلق حاليا"... نرجو زيارتنا لاحقا" </h1>
-	<h1 style="background-color:DodgerBlue;">SORRY !!! ALSAHA&nbsp;SHOP&nbsp;Website is Currently Closed... Visit Us Later</h1>
-</div>
-<button onclick="window.open('alsaha_app.apk')" style="color:green;font-size:10px;position:fixed;left:1px;top:1px;z-index:3">Install ALSAHA Application For Android Phones</button>
-<button id="button"onclick="navigateLeft()" style="font-size:10px;position:fixed;right:10px;top:1pxpx;z-index:3">إخفاء اللائحة</button>
+    <div id="message-label" class="message-label">
+        Delivery Sent to AL-SAHA SUCCESSFULLY  !
+    </div>
 <div id="main"class="mobile-container">
 <!-- Top Navigation Menu -->
-<div id="topnav"class="topnav"style="position:fixed;z-index:2">
+<div id="topnav"class="topnav">
 	<!-- search -->
-	<img src="png/searchempty.png"width="350px"height="50px"style="position:relative;top:10px;right:10px">
-	<input id="inputsearch" type="text" size="50px"onkeyup="distributeAll()"
-	style="font-family:Sakkal Majalla;font-size:25px;position:absolute;width:283px;height:32px;top:19px;left:3px;">
+	<img src="png/searchempty.png"width="350px"height="50px"style="position:fixed;top:10px;left:10px">
+	<input id="inputsearch" type="text" size="50px"	style="font-family:Sakkal Majalla;font-size:25px;position:fixed;width:283px;height:32px;top:19px;left:22px;">
+	<script type="module">
+    import { distributeAll,emptyInput } from './database.js';
+
+    const myInput = document.getElementById('inputsearch');
+    myInput.addEventListener('keyup', distributeAll);
+    myInput.addEventListener('focus', emptyInput);
+  </script>
 	<label id="numberitems"style="font-size:40px;color:white;"></label>
-	<img onmouseover="changeImage2()"onmouseout="changeImage1()"data-modal-target="#modal"class="form"id="form"type="submit"
-	style="position:absolute;width:5vw;height:3vw;top:55;left:170px;display:none;" src="png/deliver.png">
-	<div>
-		<a style="height:15%;"id="My CART"class="active" onclick="distributeMyCart();" href="javascript:void(0);">
-			<img src="png/logo.png"style="width:8vw;"><br> 
-			<span style="line-height:70%;color:white;font-size:1.5vw;font-weight:bold"id="total">Bill: 0 L.L.</span><br>
-			<span style="line-height:70%;color:red;font-size:1.5vw;font-weight:bold">+50,000 Delivery</span><br style="marin:1px;">
-			<span style="line-height:70%;color:green;font-size:2.5vw;font-weight:bold"><b id="total2"> = 50,000 L.L.</b>
-		</a>
+	<a href="javascript:showForm();"><img class="order"id="order"src="png/order.png"></a>
+	<div style="background-color: #54ccc0;">
+			<img src="png/logo3.png"class="logo"id="logo"><br>
+			<b class="deliverycost">Delivery COST (100,000 L.L.)</b><br>
+			<b>TOTAL =</b><span style="line-height:70%;color:green;font-size:2.9vw;font-weight:bold"><b id="total"> 0 L.L.</b><b class="deliverycost2">+100,000 L.L.</b>
 	</div>
-	<div id="myCategories">
-	</div>
+		<img onclick="emptyMyCart();"id="emptycart"class="emptycart" src="png/empty-cart.png" alt="Empty Cart">
+		<img onclick=""id="mycart"class="imagecart" src="png/cart3.png" alt="My Cart">
+		<img class="round" src="png/roundg.png" width="15%"alt="no items">
+		<span id="items"class="items">0</span>
+	<ul id="category"class="category">
+	</ul>
 </div>
 
-<div id="page" class="page"style="position:absolute;top:310px;left:19px;z-index:1">
+<div id="page" class="page">
 
 </div>	
 <p style="display:none;"></p>
 </div>
 <!-- End smartphone / tablet look -->
-<form name="form2"lang="ar" action="https://formspree.io/f/xjkbyvpd"method="POST">
-    <input type="email" name="email"value="strategyquant12@gmail.com"style="display:none;">
-	<input type="subject"id="subject" name="subject"value=""style="display:none;">
-    <textarea id="message" name="message"value=""style="display:none;"></textarea>
-</form>	
-<p id="customername"style="display:none;"></p>
-<p id="phonenumber"style="display:none;"></p>
-<p id="address"style="display:none;"></p>
+	<div class="form-popup" id="myForm">
+		<form  class="form-container">
+
+		<label for="name"><b>Full Name</b></label>
+		<input onkeyup="checkForm();"type="text" placeholder="Enter Full Name" id="fullname"><br>
+
+		<label for="phone"><b>Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+		<input onkeyup="checkForm();"type="text" placeholder="Enter Phone Number" id="phone"><br>
+
+		<label for="address"><b>Address&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+		<input onkeyup="checkForm();"type="text" placeholder="Enter Address" id="address"><br>
+
+		<button type="button"id="login_form"class="btn2">Deliver Now</button>
+		<button onclick="hideForm();"type="button" id="close_form"class="btn cancel">Close</button>
+		</form>
+	</div>
 </body>
-<div class="modal" id="modal">
-	<div class="modal-header">
-		<div style="position:absolute;right:40%;"class="title">تسجيل تفاصيل التوصيل</div>
-		<button data-close-button class="close-button">&times;</button>
-	</div>
-	<div style="float:right;"class="modal-body">
-		<h3 style="font-size:1rem;">
-			<input id="name"type="text"name="name"onblur="checkGoodName(name);checkSubmit();"style="font-size:1rem;width:60%;height:35px;">
-			&nbsp;&nbsp;الإسم الكامل
-		</h3>
-		<h3 style="font-size:1rem;">
-			<input id="phone1"type="text"name="phone1"onblur="checkGood1();checkSubmit();"onfocus="emptyPhone1()"onkeyup="checkPhone1();"
-			style="font-size:1rem;width:20%;height:35px;">
-			&nbsp;/
-			<input id="phone2"type="text"name="phone2"onblur="checkGood2();checkSubmit();"onclick="checkPhone();"onfocus="emptyPhone2();"onkeyup="checkPhone2();"
-			style="font-size:1rem;width:36.5%;height:35px;">
-			&nbsp;&nbsp;رقم التلفون
-		</h3>
-		<h3 style="font-size:1rem;">
-			<input id="address2"type="text"name="address2"onblur="checkGoodName('address2');"onkeyup="checkSubmit();"style="font-size:1rem;width:60%;height:35px;">
-			&nbsp;&nbsp;العنوان
-		</h3>
-		<button onclick="setValue();getValue();document.form2.submit();"id="button1"style="font-size:25px;position:relative;left:25%;">BUY-شراء</button>
-	</div>
-</div>
-<div id="modeloverlay"></div>
 </html>
