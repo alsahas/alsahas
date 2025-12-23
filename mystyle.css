@@ -214,6 +214,55 @@ div#details
 	height:5vw;
 	z-index: 9999999999;
 }
+.page_close1
+{
+	position:fixed;
+	top: 1vh;
+	right: 30vw;
+	text-align: center;
+	vertical-align: middle;
+	background-image: linear-gradient(144deg,#f940ff, #bd0606 50%,#eb0079);
+	border-radius: 1vw;
+	color: #FFFFFF;
+	font-family: Times New Roman, sans-serif;
+	font-size:clamp(0.4rem, 3vw, 6rem);
+	width: 40vw;
+	height:5vw;
+	z-index: 9999999999;
+}
+.page_close2
+{
+	position:fixed;
+	top: 30vh;
+	right: 30vw;
+	text-align: center;
+	vertical-align: middle;
+	background-image: linear-gradient(144deg,#f940ff, #bd0606 50%,#eb0079);
+	border-radius: 1vw;
+	color: #FFFFFF;
+	font-family: Times New Roman, sans-serif;
+	font-size:clamp(0.4rem, 3.5vw, 6rem);
+	width: 40vw;
+	height:20vw;
+	z-index: 9999999999;
+}
+.logo_close
+{
+	position:fixed;
+	top: 1vh;
+	right: 1vw;
+	text-align: center;
+	vertical-align: middle;
+	background-image: linear-gradient(144deg,#7c7bdb, #31d9df 50%,#0f3e97);
+	border-radius: 1vw;
+	color: #FFFFFF;
+	font-family: Times New Roman, sans-serif;
+	font-size:clamp(0.4rem, 3.5vw, 6rem);
+	width: 20vw;
+	height:14vw;
+	z-index: 9999999999;
+}
+
 .message-label 
 {
 	background-color: #4CAF50; /* Green background for success */
@@ -257,12 +306,10 @@ div#details
 
 .imagecart:hover 
 {
-	content: url('./png/cart5.png');
 	cursor: pointer;
 }
 .emptycart:hover 
 {
-	content: url('./png/empty-cart2.png');
 	cursor: pointer;
 }
 .imagecart 
@@ -283,7 +330,7 @@ div#details
 	color:WHITE;
 	position:relative;
 	left:0.3vw;
-	top:-0.3vw;
+	top:-0.16vw;
 }
 .emptycart 
 {
@@ -430,7 +477,7 @@ input[type="submit"]{
 	margin: 2px;
     padding: 0px; /* Removes default padding */
 	font-size: clamp(0.5rem, 2.3vw, 3rem);
-	height: 40%; /* Adjust this value as needed */
+	height: 80%; /* Adjust this value as needed */
 	overflow-y: auto;
 }
 
@@ -498,8 +545,8 @@ a:link
 	border-radius: 0.5vw;
 	color:#FFFFFF;
     margin-right: 1vh; /* Adds spacing between list items */
-	font-size: clamp(0.5rem, 2vw, 2rem);
-	margin-bottom: 2px;
+	font-size: clamp(0.5rem, 4vh, 4rem);
+	margin-bottom: 1px;
 }
 .category0 
 {

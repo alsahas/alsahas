@@ -98,7 +98,12 @@ function loadDictionary()
 	const storedDictionaryAsString = localStorage.getItem('userData');
 	mycart = JSON.parse(storedDictionaryAsString);
 	if(mycart!=null)document.getElementById("items").innerHTML=""+mycart.length;
-	else document.getElementById("items").innerHTML="0";
+	else 
+	{
+		var item=document.getElementById("items");
+		item.innerHTML="0";
+		item.style.marginLeft="-3.0vw";
+	}	
 	updateTotal();
 }
 function emptyMyCart()
@@ -304,7 +309,7 @@ function updateTotal2()
 			if(drivercart[i].price>1000)total+=drivercart[i].price*drivercart[i].quantity;
 			else total+=parseInt(90000*(drivercart[i].price)*(drivercart[i].quantity));
 		}
-		return Math.round(total / 10000) * 10000;
+		return Math.round(total / 10000) * 10000 +100000;
 	}
 }
 function removeSpecialChars(originalText) 

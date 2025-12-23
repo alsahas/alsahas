@@ -47,6 +47,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.3.0/firebas
 	
 async function updateRequestState(requestid,newState) 
 {
+	console.log(requestid+":"+newState);
 	const targetPath = "requests/"+requestid;
 	const updates = 
 	{
@@ -95,7 +96,7 @@ function saveDriver(drivername,user,pass)
 }
 function loadRequests()
 {
-	localStorage.setItem('request',"");
+	//localStorage.setItem('request',"");
 	var empty=document.getElementById("empty-request");
 	var request_section=document.getElementById("request_section");
 	var found=false;
