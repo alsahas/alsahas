@@ -184,7 +184,7 @@ export function distributeAll()
 				{
 					const key = keys[i];
 					const item = data[key];
-					if(item.name.indexOf(search) !== -1)
+					if((item.name.toLowerCase()).indexOf(search.toLowerCase()) !== -1)
 					{
 						if(item.pngExist>0)im=""+key;
 						if(item.price>=1000)price=numberComma(item.price)+" L.L.";
